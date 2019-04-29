@@ -1,0 +1,44 @@
+sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 10s ] thds: 2 tps: 757.74 qps: 12126.18 (r/w/o: 7579.16/3031.35/1515.67) lat (ms,95%): 5.00 err/s: 0.00 reconn/s: 0.00
+[ 20s ] thds: 2 tps: 792.88 qps: 12686.54 (r/w/o: 7928.97/3171.81/1585.75) lat (ms,95%): 4.82 err/s: 0.00 reconn/s: 0.00
+[ 30s ] thds: 2 tps: 804.67 qps: 12873.87 (r/w/o: 8046.17/3218.37/1609.33) lat (ms,95%): 4.74 err/s: 0.00 reconn/s: 0.00
+[ 40s ] thds: 2 tps: 803.81 qps: 12859.52 (r/w/o: 8037.07/3214.83/1607.61) lat (ms,95%): 4.65 err/s: 0.00 reconn/s: 0.00
+[ 50s ] thds: 2 tps: 849.60 qps: 13594.08 (r/w/o: 8496.49/3398.40/1699.20) lat (ms,95%): 4.49 err/s: 0.00 reconn/s: 0.00
+[ 60s ] thds: 2 tps: 805.50 qps: 12887.80 (r/w/o: 8054.80/3222.00/1611.00) lat (ms,95%): 4.65 err/s: 0.00 reconn/s: 0.00
+SQL statistics:
+    queries performed:
+        read:                            481450
+        write:                           192580
+        other:                           96290
+        total:                           770320
+    transactions:                        48145  (801.20 per sec.)
+    queries:                             770320 (12819.25 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          60.0894s
+    total number of events:              48145
+
+Latency (ms):
+         min:                                  1.12
+         avg:                                  2.49
+         max:                                 45.53
+         95th percentile:                      4.74
+         sum:                             119929.59
+
+Threads fairness:
+    events (avg/stddev):           24072.5000/141.50
+    execution time (avg/stddev):   59.9648/0.00
+
