@@ -11,10 +11,8 @@ taskset -c 2,3 qemu-system-x86_64 \
   -device ide-hd,drive=disk,bootindex=0 \
   -chardev socket,id=spdk_vhost_scsi0,path=/var/tmp/vhost.0 \
   -device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
-  -chardev socket,id=spdk_vhost_blk0,path=/var/tmp/vhost.1 \
-  -device vhost-user-blk-pci,chardev=spdk_vhost_blk0,num-queues=4 \
   -vnc :0 \
-  -net nic -net user,tftp=/root/tftp,hostfwd=tcp::5022-:22 \
+  -net nic -net user,tftp=/root/tftp,hostfwd=tcp::5022-:22,hostfwd=tcp::13306-:3306 \
   -name vm0 &
 
 
