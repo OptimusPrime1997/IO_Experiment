@@ -1,0 +1,16 @@
+#!/bin/bash
+DIR='/home/ljh/exp/scripts/sysbench/'
+
+echo "start write only test"
+sudo bash $DIR"write_pre.sh"
+sudo bash $DIR"write_run.sh"
+sudo bash $DIR"write_clean.sh"
+
+echo "start read write test"
+sudo bash $DIR"rw_pre.sh"
+sudo bash $DIR"rw_run.sh"
+sudo bash $DIR"rw_clean.sh"
+
+echo "start read only test"
+sudo bash $DIR"read_pre.sh"
+sudo bash $DIR"read_run.sh"
