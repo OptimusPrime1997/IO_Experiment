@@ -1,8 +1,8 @@
 #/bin/bash
-taskset -c 32,128 qemu-system-x86_64 \
+taskset -c 11 qemu-system-x86_64 \
   --enable-kvm \
   -cpu host \
-  -smp 2 \
+  -smp 1 \
   -m 1G \
   -object memory-backend-file,id=mem0,size=1G,mem-path=/dev/hugepages,share=on \
   -numa node,memdev=mem0 \

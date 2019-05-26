@@ -1,0 +1,69 @@
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option h with value '127.0.0.1'
+option P with value '13306'
+option d with value 'benchmarker'
+option u with value 'root'
+option p with value '123456'
+option w with value '11'
+option c with value '8'
+option r with value '22'
+option l with value '60'
+option i with value '10'
+<Parameters>
+     [server]: 127.0.0.1
+     [port]: 13306
+     [DBname]: benchmarker
+       [user]: root
+       [pass]: 123456
+  [warehouse]: 11
+ [connection]: 8
+     [rampup]: 22 (sec.)
+    [measure]: 60 (sec.)
+
+RAMP-UP TIME.(22 sec.)
+
+MEASURING START.
+
+  10, trx: 429, 95%: 135.282, 99%: 153.039, max_rt: 191.220, 427|113.763, 43|30.056, 43|228.513, 44|481.260
+  20, trx: 446, 95%: 123.478, 99%: 133.792, max_rt: 146.522, 449|86.804, 44|36.549, 45|237.771, 44|394.388
+  30, trx: 462, 95%: 123.294, 99%: 138.106, max_rt: 151.145, 461|81.938, 46|24.160, 45|208.126, 46|378.993
+  40, trx: 466, 95%: 123.478, 99%: 138.188, max_rt: 181.394, 466|68.027, 47|32.707, 47|218.451, 47|339.804
+  50, trx: 470, 95%: 119.193, 99%: 137.652, max_rt: 164.334, 471|81.973, 48|35.075, 48|200.176, 47|357.212
+  60, trx: 467, 95%: 121.680, 99%: 133.353, max_rt: 205.759, 467|94.999, 46|40.843, 46|202.185, 47|350.262
+
+STOPPING THREADS.......2013, HY000, Lost connection to MySQL server at 'reading initial communication packet', system error: 104
+error at thread_main
+
+
+<Raw Results>
+  [0] sc:0 lt:2740  rt:0  fl:0 avg_rt: 113.2 (5)
+  [1] sc:37 lt:2704  rt:0  fl:0 avg_rt: 28.5 (5)
+  [2] sc:98 lt:176  rt:0  fl:0 avg_rt: 11.7 (5)
+  [3] sc:0 lt:274  rt:0  fl:0 avg_rt: 238.9 (80)
+  [4] sc:0 lt:275  rt:0  fl:0 avg_rt: 424.8 (20)
+ in 60 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:0  lt:2740  rt:0  fl:0 
+  [1] sc:37  lt:2704  rt:0  fl:0 
+  [2] sc:98  lt:176  rt:0  fl:0 
+  [3] sc:0  lt:274  rt:0  fl:0 
+  [4] sc:0  lt:275  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: 43.48% (>=43.0%) [OK]
+   Order-Status: 4.35% (>= 4.0%) [OK]
+       Delivery: 4.35% (>= 4.0%) [OK]
+    Stock-Level: 4.36% (>= 4.0%) [OK]
+ [response time (at least 90% passed)]
+      New-Order: 0.00%  [NG] *
+        Payment: 1.35%  [NG] *
+   Order-Status: 35.77%  [NG] *
+       Delivery: 0.00%  [NG] *
+    Stock-Level: 0.00%  [NG] *
+
+<TpmC>
+                 2740.000 TpmC

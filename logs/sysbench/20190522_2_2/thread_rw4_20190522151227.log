@@ -1,0 +1,44 @@
+sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 4
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 10s ] thds: 4 tps: 495.19 qps: 7928.81 (r/w/o: 4955.88/1982.15/990.78) lat (ms,95%): 17.95 err/s: 0.00 reconn/s: 0.00
+[ 20s ] thds: 4 tps: 501.31 qps: 8019.10 (r/w/o: 5012.26/2004.22/1002.61) lat (ms,95%): 18.61 err/s: 0.00 reconn/s: 0.00
+[ 30s ] thds: 4 tps: 490.50 qps: 7846.68 (r/w/o: 4903.69/1962.00/981.00) lat (ms,95%): 17.63 err/s: 0.00 reconn/s: 0.00
+[ 40s ] thds: 4 tps: 498.90 qps: 7983.92 (r/w/o: 4990.61/1995.50/997.80) lat (ms,95%): 18.28 err/s: 0.00 reconn/s: 0.00
+[ 50s ] thds: 4 tps: 506.30 qps: 8098.96 (r/w/o: 5061.14/2025.21/1012.61) lat (ms,95%): 18.61 err/s: 0.00 reconn/s: 0.00
+[ 60s ] thds: 4 tps: 502.89 qps: 8047.61 (r/w/o: 5030.24/2011.58/1005.79) lat (ms,95%): 17.32 err/s: 0.00 reconn/s: 0.00
+SQL statistics:
+    queries performed:
+        read:                            299570
+        write:                           119828
+        other:                           59914
+        total:                           479312
+    transactions:                        29957  (499.20 per sec.)
+    queries:                             479312 (7987.23 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          60.0056s
+    total number of events:              29957
+
+Latency (ms):
+         min:                                  2.49
+         avg:                                  8.01
+         max:                                 48.23
+         95th percentile:                     18.28
+         sum:                             239938.03
+
+Threads fairness:
+    events (avg/stddev):           7489.2500/176.02
+    execution time (avg/stddev):   59.9845/0.00
+

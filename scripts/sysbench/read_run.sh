@@ -1,7 +1,7 @@
 #/bin/bash
 d=`date +%Y%m%d%H%M%S`
 op='r'
-ts=(1 2 4 8 16)
+ts=(1 2 4)
 #ts=(4)
 for data in ${ts[@]}
 do

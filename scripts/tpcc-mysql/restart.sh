@@ -1,9 +1,5 @@
-#!/bin/bash
-
-passwd='123'
-
-/usr/bin/expect <<-EOF
-
+#!/usr/bin/expect
+set passwd "123"
 set time 5              
 
 spawn ssh -p5022 ljh@127.0.0.1
@@ -18,14 +14,12 @@ expect {
 
 expect "*#"                      
 
-send "echo '123'|sudo -S service mysql restart > /dev/null 2>&1;\r" 
+send "echo '123'|sudo -S service mysql restart > /dev/null 2>&1;exit;\r" 
 
 expect "*#"    
 
-send "exit\r"
+#send "exit\r"
 
-interact
+#interact
 
-expect eof
-
-EOF
+#expect eof
