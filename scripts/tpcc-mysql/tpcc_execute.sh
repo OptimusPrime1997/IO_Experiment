@@ -4,7 +4,7 @@ IP='127.0.0.1'
 d=`date +%Y%m%d%H%M%S`
 op='rw'
 ts=(1 2 4 8 16)
-#ts=(8 16)
+#ts=(4 8 16)
 for data in ${ts[@]}
 do
         echo $data

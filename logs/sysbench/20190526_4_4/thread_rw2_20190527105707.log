@@ -1,0 +1,44 @@
+sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 2
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 10s ] thds: 2 tps: 497.06 qps: 7953.51 (r/w/o: 4970.93/1988.25/994.33) lat (ms,95%): 5.88 err/s: 0.00 reconn/s: 0.00
+[ 20s ] thds: 2 tps: 456.92 qps: 7311.02 (r/w/o: 4569.50/1827.68/913.84) lat (ms,95%): 7.04 err/s: 0.00 reconn/s: 0.00
+[ 30s ] thds: 2 tps: 426.11 qps: 6818.37 (r/w/o: 4261.50/1704.64/852.22) lat (ms,95%): 7.04 err/s: 0.00 reconn/s: 0.00
+[ 40s ] thds: 2 tps: 541.19 qps: 8660.17 (r/w/o: 5412.86/2164.94/1082.37) lat (ms,95%): 5.47 err/s: 0.00 reconn/s: 0.00
+[ 50s ] thds: 2 tps: 460.81 qps: 7371.91 (r/w/o: 4607.43/1842.85/921.63) lat (ms,95%): 6.91 err/s: 0.00 reconn/s: 0.00
+[ 60s ] thds: 2 tps: 535.20 qps: 8563.43 (r/w/o: 5352.26/2140.78/1070.39) lat (ms,95%): 5.99 err/s: 0.00 reconn/s: 0.00
+SQL statistics:
+    queries performed:
+        read:                            291770
+        write:                           116708
+        other:                           58354
+        total:                           466832
+    transactions:                        29177  (486.22 per sec.)
+    queries:                             466832 (7779.45 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          60.0022s
+    total number of events:              29177
+
+Latency (ms):
+         min:                                  2.35
+         avg:                                  4.11
+         max:                                 28.09
+         95th percentile:                      6.55
+         sum:                             119938.78
+
+Threads fairness:
+    events (avg/stddev):           14588.5000/846.50
+    execution time (avg/stddev):   59.9694/0.00
+
