@@ -2,7 +2,7 @@
 d=`date +%Y%m%d%H%M%S`
 op='r'
 ts=(1 2 4)
-#ts=(4)
+ts=(32)
 for data in ${ts[@]}
 do
 	echo $data
