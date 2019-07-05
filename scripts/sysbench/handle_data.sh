@@ -9,6 +9,6 @@ do
 	echo $result > $resultfile
 	allStr=$allStr$result"\n"
 done
-echo -e $allStr > $dir"/sys_all.csv"
+echo -e $allStr > $dir"/allStr.csv"
 
 

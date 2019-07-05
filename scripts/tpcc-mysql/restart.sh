@@ -1,8 +1,8 @@
 #!/usr/bin/expect
 set passwd "123"
 set time 5              
-
-spawn ssh -p5022 ljh@127.0.0.1
+#set IP "192.168.122.77"
+spawn ssh -p5022 ljh@192.168.122.77
 
 expect {
 
