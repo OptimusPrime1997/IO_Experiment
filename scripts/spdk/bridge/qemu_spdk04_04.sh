@@ -10,7 +10,7 @@ taskset -c 11,13,15,17 qemu-system-x86_64 \
   -chardev socket,id=spdk_vhost_scsi0,path=/var/ljh/mem/vhost.10 \
   -device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
   -vnc :0 \
-  -net nic,model=vmxnet3,name=nic0404,vectors=0 -net tap,ifname=tap1,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
+  -net nic,model=vmxnet3,name=nic0404,vectors=0 -net tap,ifname=tap0404,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
   -name vm0 &
 
 

@@ -6,7 +6,7 @@ taskset -c 11,13,15,17 qemu-system-x86_64 \
   -m 4G \
   -object memory-backend-file,id=mem0,size=4G,mem-path=/dev/hugepages,share=on \
   -numa node,memdev=mem0 \
-  -hda /home/ljh/image/ubuntu-server18.04_0204.qcow2 \
+  -hda /home/ljh/image/ubuntu-server18.04.qcow2 \
   -chardev socket,id=spdk_vhost_scsi0,path=/var/ljh/mem/vhost.10 \
   -device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
   -vnc :0 \

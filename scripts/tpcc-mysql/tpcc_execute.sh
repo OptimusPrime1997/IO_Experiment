@@ -11,7 +11,13 @@ ts=(1 2 4 8 16 32 64)
 #ts=(32 64) 
 num=('01' '02' '04' '08' '16' '32' '64')
 i=0
-dir="/home/ljh/exp/logs/tpcc-mysql/"${CPU}"_"${MEM}"_"${date}"/"
+if [ ${#CPU} -ne 2 ];then
+	CPUFormat="0"$CPU
+fi
+if [ ${#MEM} -ne 2 ];then
+	MEMFormat="0"$MEM
+fi
+dir="/home/ljh/exp/logs/tpcc-mysql/"${CPUFormat}"_"${MEMFormat}"_"${date}"/"
 echo $dir
 #exit
 if [ ! -d $dir ];then
