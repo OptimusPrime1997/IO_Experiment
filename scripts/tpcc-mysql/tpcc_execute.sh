@@ -2,10 +2,12 @@
 #excute
 CPU=$1
 MEM=$2
-IP='192.168.122.77'
+IP=$3
 PORT=3306
 d=`date +%Y%m%d%H%M%S`
-date=`date +%Y%m%d`
+date=`date +%Y%m%d%H`
+IPTEMP=`expr substr $IP 13 2`
+date=$date"_"$IPTEMP
 op='rw'
 ts=(1 2 4 8 16 32 64)
 #ts=(32 64) 

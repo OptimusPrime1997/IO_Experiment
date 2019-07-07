@@ -1,18 +1,24 @@
 #/bin/bash
-MAC=52:54:00:12:34:01
+#hexchars="0123456789ABCDEF"
+#end=$( for i in {1..6} ; do echo -n ${hexchars:$(( $RANDOM % 16 )):1} ; done | sed -e 's/\(..\)/:\1/g' )
+#N is one of [01 02 03 04 05 06 07 08]
+N=$1
+T=`expr substr $N 2 1`
+S=$(($T-1))
+MAC="52:54:00:12:34:"$N
 qemu-system-x86_64 \
   --enable-kvm \
   -cpu host \
-  -smp 1 \
-  -m 4G \
-  -object memory-backend-file,id=mem0,size=4G,mem-path=/dev/hugepages,share=on \
+  -smp 2 \
+  -m 2G \
+  -object memory-backend-file,id=mem0,size=2G,mem-path=/dev/hugepages,share=on \
   -numa node,memdev=mem0 \
-  -hda /home/ljh/image/ubuntu-server18.04.qcow2 \
-  -chardev socket,id=spdk_vhost_scsi0,path=/var/ljh/mem/vhost.10 \
-  -device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
-  -vnc :0 \
-  -net nic,model=vmxnet3,macaddr=$MAC,vectors=0 -net tap,ifname=tap0104,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
-  -name vm0 &
+  -hda "/home/ljh/image/"$N"ubuntu-server18.04.qcow2" \
+  -chardev socket,id="spdk_vhost_scsi"$S,path="/var/ljh/mem/vhost."$N \
+  -device vhost-user-scsi-pci,id="scsi"$S,chardev="spdk_vhost_scsi"$S,num_queues=4 \
+  -vnc :1$N \
+  -net nic,model=vmxnet3,macaddr=$MAC,vectors=0 -net tap,ifname="tap"$N,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
+  -name "vm"$N &
 
 
 #  taskset -c 2,3 qemu-system-x86_64 \
@@ -20,7 +26,7 @@ qemu-system-x86_64 \
 #  -cpu host \
 #  -smp 2 \
 #  -m 1G \
-#  -object memory-backend-file,id=mem0,size=1G,mem-path=/dev/hugepages,share=on \
+# -object memory-backend-file,id=mem0,size=1G,mem-path=/dev/hugepages,share=on \
 #  -numa node,memdev=mem0 \
 #  -drive file=/home/ljh/image/ubuntu-server18.04.qcow2,if=none,id=disk \
 #  -cdrom /home/ljh/image/ubuntu-18.04.2-live-server-amd64.iso \

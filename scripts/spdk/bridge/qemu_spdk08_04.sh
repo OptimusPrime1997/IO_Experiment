@@ -1,9 +1,8 @@
 #/bin/bash
-MAC=52:54:00:12:34:01
 qemu-system-x86_64 \
   --enable-kvm \
   -cpu host \
-  -smp 1 \
+  -smp 8 \
   -m 4G \
   -object memory-backend-file,id=mem0,size=4G,mem-path=/dev/hugepages,share=on \
   -numa node,memdev=mem0 \
@@ -11,9 +10,11 @@ qemu-system-x86_64 \
   -chardev socket,id=spdk_vhost_scsi0,path=/var/ljh/mem/vhost.10 \
   -device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
   -vnc :0 \
-  -net nic,model=vmxnet3,macaddr=$MAC,vectors=0 -net tap,ifname=tap0104,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
+  -net nic,model=vmxnet3,name=nic0804,vectors=0 -net tap,ifname=tap0804,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
   -name vm0 &
 
+
+#-net nic -net user,tftp=/root/tftp,hostfwd=tcp::5022-:22,hostfwd=tcp::13306-:3306 \
 
 #  taskset -c 2,3 qemu-system-x86_64 \
 # --enable-kvm \
