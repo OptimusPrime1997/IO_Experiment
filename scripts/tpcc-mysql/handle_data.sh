@@ -13,7 +13,7 @@ do
 	resultfile=`echo $dir"/"$data | sed 's/\.log/\.csv/g'`
 	echo "resultfile:"$resultfile
 	allStr=$allStr$avg","$tpmc"\n"
-	echo $avg","$tpmc > $resultfile
+	#echo $avg","$tpmc > $resultfile
 done
 echo -e $allStr
 echo -e $allStr > $dir"/allStr.csv"
