@@ -14,6 +14,7 @@ qemu-system-x86_64 \
   -hda "/home/ljh/image/"$N"ubuntu-server18.04.qcow2" \
   -chardev socket,id="spdk_vhost_scsi"$S,path="/var/ljh/mem/vhost."$N \
   -device vhost-user-scsi-pci,id="scsi"$S,chardev="spdk_vhost_scsi"$S,num_queues=4 \
+  -device vfio-pci,host=04:00.0 \
   -vnc :1$N \
   -net nic,model=vmxnet3,macaddr=$MAC,vectors=0 -net tap,ifname=tap$N,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
   -name "vm"$N &
@@ -37,7 +38,7 @@ qemu-system-x86_64 \
 #  -device vhost-user-blk-pci,chardev=spdk_vhost_blk0,num-queues=4 \
   #vhost-NVMe(experimental)
   #-chardev socket,id=spdk_vhost_nvme0,path=/var/tmp/vhost.2 \
-  #-device vhost-user-nvme,id=nvme0,chardev=spdk_vhost_nvme0,num_imuanqo_queues=4 \
+  #-device vhost-user-nvme,id=nvme0,chardev=spdk_vhost_nvme0,num_io_queues=4 \
 
 #  -vnc :0 \
 #  -net nic -net user,tftp=/root/tftp,hostfwd=tcp::5022-:22 \

@@ -1,0 +1,32 @@
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option h with value '192.168.122.77'
+option P with value '3306'
+option d with value 'benchmarker'
+option u with value 'root'
+option p with value '123456'
+option w with value '11'
+option c with value '1'
+option r with value '22'
+option l with value '60'
+option i with value '10'
+<Parameters>
+     [server]: 192.168.122.77
+     [port]: 3306
+     [DBname]: benchmarker
+       [user]: root
+       [pass]: 123456
+  [warehouse]: 11
+ [connection]: 1
+     [rampup]: 22 (sec.)
+    [measure]: 60 (sec.)
+
+RAMP-UP TIME.(22 sec.)
+
+MEASURING START.
+
+  10, trx: 1175, 95%: 6.476, 99%: 9.868, max_rt: 19.763, 1168|11.398, 117|2.698, 118|27.783, 117|27.793
+  20, trx: 1176, 95%: 6.257, 99%: 8.839, max_rt: 14.045, 1185|7.225, 118|2.724, 117|20.266, 119|24.131
+  30, trx: 1171, 95%: 6.367, 99%: 8.768, max_rt: 13.321, 1166|5.184, 117|2.906, 117|30.432, 116|28.643
+  40, trx: 1178, 95%: 6.293, 99%: 8.831, max_rt: 14.792, 1180|5.498, 119|2.542, 118|21.626, 118|25.495

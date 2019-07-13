@@ -7,7 +7,7 @@ MAC="52:54:00:12:34:"$N
 qemu-system-x86_64 \
   --enable-kvm \
   -cpu host \
-  -smp 2 \
+  -smp 1 \
   -m 2G \
   -object memory-backend-file,id=mem0,size=2G,mem-path=/dev/hugepages,share=on \
   -numa node,memdev=mem0 \
