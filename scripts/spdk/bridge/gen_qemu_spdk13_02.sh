@@ -1,19 +1,21 @@
 #/bin/bash
 #hexchars="0123456789ABCDEF"
 #end=$( for i in {1..6} ; do echo -n ${hexchars:$(( $RANDOM % 16 )):1} ; done | sed -e 's/\(..\)/:\1/g' )
-N=01
+N=$1
+QUEUE=$2
+SMP=$3
 S=$(($N-1))
 MAC="52:54:00:12:34:"$N
 qemu-system-x86_64 \
   --enable-kvm \
   -cpu host \
-  -smp 2 \
+  -smp $SMP \
   -m 2G \
   -object memory-backend-file,id=mem0,size=2G,mem-path=/dev/hugepages,share=on \
   -numa node,memdev=mem0 \
   -hda "/home/ljh/image/"$N"ubuntu-server18.04.qcow2" \
   -chardev socket,id="spdk_vhost_scsi"$S,path="/var/ljh/mem/vhost."$N \
-  -device vhost-user-scsi-pci,id="scsi"$S,chardev="spdk_vhost_scsi"$S,num_queues=4 \
+  -device vhost-user-scsi-pci,id="scsi"$S,chardev="spdk_vhost_scsi"$S,num_queues=$QUEUE \
   -vnc :1$N \
   -net nic,model=vmxnet3,macaddr=$MAC,vectors=0 -net tap,ifname=tap$N,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
   -name "vm"$N &
