@@ -47,10 +47,10 @@ stonewall
 runtime=30
 bs=4K
 iodepth=4
-numjobs=2
+numjobs=20
 group_reporting
 rw=randread
-cpus_allowed=0-1
+cpus_allowed=0-19
 stonewall
 
 
@@ -58,10 +58,10 @@ stonewall
 runtime=30
 bs=4K
 iodepth=4
-numjobs=2
+numjobs=20
 group_reporting
 rw=randwrite
-cpus_allowed=0-1
+cpus_allowed=0-19
 stonewall
 
 
@@ -69,12 +69,12 @@ stonewall
 runtime=30
 bs=4K
 iodepth=4
-numjobs=2
+numjobs=20
 group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-1
+cpus_allowed=0-19
 stonewall
 
 
@@ -82,10 +82,10 @@ stonewall
 runtime=30
 bs=4K
 iodepth=32
-numjobs=2
+numjobs=20
 group_reporting
 rw=randread
-cpus_allowed=0-1
+cpus_allowed=0-19
 stonewall
 
 
@@ -93,20 +93,20 @@ stonewall
 runtime=30
 bs=4K
 iodepth=32
-numjobs=2
+numjobs=20
 group_reporting
 rw=randwrite
-cpus_allowed=0-1
+cpus_allowed=0-19
 stonewall
 
 [rand-rw-4K-qd128]
 runtime=30
 bs=4K
 iodepth=32
-numjobs=2
+numjobs=20
 group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-1
+cpus_allowed=0-19
 stonewall
