@@ -10,10 +10,12 @@ IPTEMP=`expr substr $IP 13 2`
 date=$date"_"$IPTEMP
 op='rw'
 ts=(1 2 4 8 16 32 64)
-ts=( 16 32 64 128)
+ts=(8 16 32 64 128)
+ts=( 4 )
 #ts=(32 64) 
 num=('01' '02' '04' '08' '16' '32' '64')
-num=('016' '032' '064' '128' )
+num=('008' '016' '032' '064' '128' )
+num=( '004' )
 i=0
 if [ ${#CPU} -ne 2 ];then
 	CPUFormat="0"$CPU
@@ -35,7 +37,7 @@ for data in ${ts[@]}
 do
         echo $data
 #	sudo bash /home/ljh/exp/scripts/tpcc-mysql/restart.sh > /dev/null 2>&1 
-	sudo taskset -c 24-31 /home/ljh/projects/tpcc-mysql/tpcc_start -h $IP -P $PORT -dbenchmarker -uroot -p123456 -w11 -c${data} -r22 -l60 -i10 > $dir"tpcc_"${num[$i]}_$d".log"   2>&1
+	sudo taskset -c 12 /home/ljh/projects/tpcc-mysql/tpcc_start -h $IP -P $PORT -dbenchmarker -uroot -p123456 -w11 -c${data} -r22 -l60 -i10 > $dir"tpcc_"${num[$i]}_$d".log"   2>&1
         #sudo sysbench /usr/share/sysbench/oltp_read_write.lua --threads=$data --events=0 --time=60 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=123456 --mysql-port=13306 --db-driver=mysql --tables=10 --table-size=1000000 --range_selects=off --db-ps-mode=disable --report-interval=10  run  > /var/log/sysbench/thread_${op}${data}_$d.log
 	i=$[i+1]
 done

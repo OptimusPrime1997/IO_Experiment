@@ -1,6 +1,6 @@
 [global]
 direct=1
-filename=/dev/sdb
+filename=/dev/vda
 log_avg_msec=500
 time_based
 ## Test 1

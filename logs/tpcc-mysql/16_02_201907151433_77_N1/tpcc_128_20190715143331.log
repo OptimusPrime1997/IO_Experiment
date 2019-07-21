@@ -1,0 +1,67 @@
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option h with value '192.168.122.77'
+option P with value '3306'
+option d with value 'benchmarker'
+option u with value 'root'
+option p with value '123456'
+option w with value '11'
+option c with value '128'
+option r with value '22'
+option l with value '60'
+option i with value '10'
+<Parameters>
+     [server]: 192.168.122.77
+     [port]: 3306
+     [DBname]: benchmarker
+       [user]: root
+       [pass]: 123456
+  [warehouse]: 11
+ [connection]: 128
+     [rampup]: 22 (sec.)
+    [measure]: 60 (sec.)
+
+RAMP-UP TIME.(22 sec.)
+
+MEASURING START.
+
+  10, trx: 5030, 95%: 138.106, 99%: 196.554, max_rt: 579.497, 5040|689.841, 504|88.489, 504|1741.037, 501|294.020
+  20, trx: 5199, 95%: 122.741, 99%: 173.801, max_rt: 472.062, 5190|689.416, 520|133.483, 517|1887.348, 520|196.489
+  30, trx: 4855, 95%: 140.398, 99%: 195.674, max_rt: 538.200, 4874|980.289, 486|75.207, 477|1535.886, 485|241.234
+  40, trx: 4975, 95%: 138.935, 99%: 193.461, max_rt: 446.810, 4957|651.676, 497|78.941, 500|1956.289, 499|204.577
+  50, trx: 4880, 95%: 146.802, 99%: 221.026, max_rt: 480.480, 4869|732.925, 489|57.630, 507|1864.182, 490|241.079
+  60, trx: 4609, 95%: 146.013, 99%: 214.123, max_rt: 469.130, 4625|654.286, 459|70.275, 438|2338.064, 456|249.352
+
+STOPPING THREADS................................................................................................................................
+
+<Raw Results>
+  [0] sc:2 lt:29546  rt:0  fl:0 avg_rt: 90.2 (5)
+  [1] sc:1103 lt:28452  rt:0  fl:0 avg_rt: 153.6 (5)
+  [2] sc:1356 lt:1600  rt:0  fl:0 avg_rt: 10.9 (5)
+  [3] sc:2 lt:2941  rt:0  fl:0 avg_rt: 935.1 (80)
+  [4] sc:0 lt:2951  rt:0  fl:0 avg_rt: 142.5 (20)
+ in 60 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:2  lt:29546  rt:0  fl:0 
+  [1] sc:1103  lt:28465  rt:0  fl:0 
+  [2] sc:1356  lt:1600  rt:0  fl:0 
+  [3] sc:2  lt:2941  rt:0  fl:0 
+  [4] sc:0  lt:2951  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: 43.49% (>=43.0%) [OK]
+   Order-Status: 4.35% (>= 4.0%) [OK]
+       Delivery: 4.33% (>= 4.0%) [OK]
+    Stock-Level: 4.34% (>= 4.0%) [OK]
+ [response time (at least 90% passed)]
+      New-Order: 0.01%  [NG] *
+        Payment: 3.73%  [NG] *
+   Order-Status: 45.87%  [NG] *
+       Delivery: 0.07%  [NG] *
+    Stock-Level: 0.00%  [NG] *
+
+<TpmC>
+                 29548.000 TpmC

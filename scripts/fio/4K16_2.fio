@@ -50,7 +50,7 @@ iodepth=4
 numjobs=16
 group_reporting
 rw=randread
-cpus_allowed=0-15
+cpus_allowed=0-1
 stonewall
 
 
@@ -61,7 +61,7 @@ iodepth=4
 numjobs=16
 group_reporting
 rw=randwrite
-cpus_allowed=0-15
+cpus_allowed=0-1
 stonewall
 
 
@@ -74,7 +74,7 @@ group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-15
+cpus_allowed=0-1
 stonewall
 
 
@@ -85,7 +85,7 @@ iodepth=32
 numjobs=16
 group_reporting
 rw=randread
-cpus_allowed=0-15
+cpus_allowed=0-1
 stonewall
 
 
@@ -96,7 +96,7 @@ iodepth=32
 numjobs=16
 group_reporting
 rw=randwrite
-cpus_allowed=0-15
+cpus_allowed=0-1
 stonewall
 
 [rand-rw-4K-qd128]
@@ -108,5 +108,5 @@ group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-15
+cpus_allowed=0-1
 stonewall
