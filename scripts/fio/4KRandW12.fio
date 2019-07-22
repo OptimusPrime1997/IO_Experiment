@@ -1,6 +1,6 @@
 [global]
 direct=1
-filename=/dev/nvme1n1
+filename=/dev/vda
 log_avg_msec=500
 time_based
 ## Test 1
@@ -64,32 +64,32 @@ rw=randwrite
 cpus_allowed=0-11
 stonewall
 
-[randw-4K-n16-c16]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=16
-group_reporting
-rw=randwrite
-cpus_allowed=0-15
-stonewall
+#[randw-4K-n16-c16]
+#runtime=30
+#bs=4K
+#iodepth=32
+#numjobs=16
+#group_reporting
+#rw=randwrite
+#cpus_allowed=0-15
+#stonewall
 
-[randw-4K-n20-c20]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=20
-group_reporting
-rw=randwrite
-cpus_allowed=0-19
-stonewall
+#[randw-4K-n20-c20]
+#runtime=30
+#bs=4K
+#iodepth=32
+#numjobs=20
+#group_reporting
+#rw=randwrite
+#cpus_allowed=0-19
+#stonewall
 
-[randw-4K-n24-c24]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=24
-group_reporting
-rw=randwrite
-cpus_allowed=0-23
-stonewall
+#[randw-4K-n24-c24]
+#runtime=30
+#bs=4K
+#iodepth=32
+#numjobs=24
+#group_reporting
+#rw=randwrite
+#cpus_allowed=0-23
+#stonewall
