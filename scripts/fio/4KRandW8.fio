@@ -54,15 +54,15 @@ rw=randwrite
 cpus_allowed=0-7
 stonewall
 
-[randw-4K-n12-c12]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=12
-group_reporting
-rw=randwrite
-cpus_allowed=0-11
-stonewall
+#[randw-4K-n12-c12]
+#runtime=30
+#bs=4K
+#iodepth=32
+#numjobs=12
+#group_reporting
+#rw=randwrite
+#cpus_allowed=0-11
+#stonewall
 
 #[randw-4K-n16-c16]
 #runtime=30
