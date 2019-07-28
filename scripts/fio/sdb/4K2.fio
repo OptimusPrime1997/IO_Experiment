@@ -1,8 +1,9 @@
 [global]
 direct=1
-filename=/dev/sdb
+filename=/dev/nvme0n1
 log_avg_msec=500
 time_based
+#size=10G
 ## Test 1
 ioengine=libaio
 ## Test 2

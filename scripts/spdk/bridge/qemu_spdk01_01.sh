@@ -1,19 +1,19 @@
 #/bin/bash
-taskset -c 11 qemu-system-x86_64 \
+taskset -c 11 /home/ljh/projects/qemu/x86_64-softmmu/qemu-system-x86_64  \
   --enable-kvm \
   -cpu host \
   -smp 1 \
   -m 1G \
-  -object memory-backend-file,id=mem0,size=1G,mem-path=/dev/hugepages,share=on \
-  -numa node,memdev=mem0 \
   -hda /home/ljh/image/ubuntu-server18.04.qcow2 \
-  -chardev socket,id=spdk_vhost_scsi0,path=/var/ljh/mem/vhost.10 \
-  -device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
   -vnc :0 \
-  -net nic,model=vmxnet3,name=nic0204,vectors=0 -net tap,ifname=tap1,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
-  -name vm0 &
+  -net nic,model=pvrdma,name=nic0204,vectors=0 -net tap,ifname=tap1,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
+  -name vm1 &
 
 
+  #-numa node,memdev=mem0 \
+  #-object memory-backend-file,id=mem0,size=1G,mem-path=/dev/hugepages,share=on \
+  #-chardev socket,id=spdk_vhost_scsi0,path=/var/ljh/mem/vhost.10 \
+  #-device vhost-user-scsi-pci,id=scsi0,chardev=spdk_vhost_scsi0,num_queues=4 \
 #  taskset -c 2,3 qemu-system-x86_64 \
 # --enable-kvm \
 #  -cpu host \
