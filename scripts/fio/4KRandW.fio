@@ -1,6 +1,6 @@
 [global]
 direct=1
-filename=/dev/vda
+filename=/dev/nvme0n1
 log_avg_msec=500
 time_based
 ## Test 1
