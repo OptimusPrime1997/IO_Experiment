@@ -1,9 +1,8 @@
 [global]
 direct=1
-filename=/dev/nvme0n1
+filename=/dev/sdb
 log_avg_msec=500
 time_based
-#size=10G
 ## Test 1
 ioengine=libaio
 ## Test 2
@@ -20,7 +19,7 @@ bs=128K
 iodepth=16
 numjobs=1
 rw=write
-cpus_allowed=0
+cpus_allowed=0-7
 stonewall
 
 
@@ -30,7 +29,7 @@ bs=4K
 iodepth=1
 numjobs=1
 rw=randread
-cpus_allowed=0
+cpus_allowed=0-7
 stonewall
 
 
@@ -51,7 +50,7 @@ iodepth=4
 numjobs=4
 group_reporting
 rw=randread
-cpus_allowed=0-1
+cpus_allowed=0-7
 stonewall
 
 
@@ -62,7 +61,7 @@ iodepth=4
 numjobs=4
 group_reporting
 rw=randwrite
-cpus_allowed=0-1
+cpus_allowed=0-7
 stonewall
 
 
@@ -75,7 +74,7 @@ group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-1
+cpus_allowed=0-7
 stonewall
 
 
@@ -86,7 +85,7 @@ iodepth=32
 numjobs=4
 group_reporting
 rw=randread
-cpus_allowed=0-1
+cpus_allowed=0-7
 stonewall
 
 
@@ -97,7 +96,7 @@ iodepth=32
 numjobs=4
 group_reporting
 rw=randwrite
-cpus_allowed=0-1
+cpus_allowed=0-7
 stonewall
 
 [rand-rw-4K-qd128]
@@ -109,5 +108,5 @@ group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-1
+cpus_allowed=0-7
 stonewall

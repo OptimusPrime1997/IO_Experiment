@@ -3,7 +3,6 @@ direct=1
 filename=/dev/nvme0n1
 log_avg_msec=500
 time_based
-#size=10G
 ## Test 1
 ioengine=libaio
 ## Test 2
@@ -48,7 +47,7 @@ stonewall
 runtime=30
 bs=4K
 iodepth=4
-numjobs=4
+numjobs=2
 group_reporting
 rw=randread
 cpus_allowed=0-1
@@ -59,7 +58,7 @@ stonewall
 runtime=30
 bs=4K
 iodepth=4
-numjobs=4
+numjobs=2
 group_reporting
 rw=randwrite
 cpus_allowed=0-1
@@ -70,7 +69,7 @@ stonewall
 runtime=30
 bs=4K
 iodepth=4
-numjobs=4
+numjobs=2
 group_reporting
 rw=randrw
 rwmixread=70
@@ -83,7 +82,7 @@ stonewall
 runtime=30
 bs=4K
 iodepth=32
-numjobs=4
+numjobs=2
 group_reporting
 rw=randread
 cpus_allowed=0-1
@@ -94,7 +93,7 @@ stonewall
 runtime=30
 bs=4K
 iodepth=32
-numjobs=4
+numjobs=2
 group_reporting
 rw=randwrite
 cpus_allowed=0-1
@@ -104,7 +103,7 @@ stonewall
 runtime=30
 bs=4K
 iodepth=32
-numjobs=4
+numjobs=2
 group_reporting
 rw=randrw
 rwmixread=70

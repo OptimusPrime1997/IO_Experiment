@@ -11,11 +11,11 @@ ioengine=libaio
 # ioengine=pvsync2
 # hipri
 percentile_list=10:20:30:40:50:70:90:99:99.9:99.99:99.999
-
+runtime=120
 
 
 [randw-4K-n1-c1]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=1
@@ -25,7 +25,7 @@ cpus_allowed=0
 stonewall
 
 [randw-4K-n2-c2]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=2
@@ -35,7 +35,7 @@ cpus_allowed=0-1
 stonewall
 
 [randw-4K-n4-c4]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=4
@@ -45,7 +45,7 @@ cpus_allowed=0-3
 stonewall
 
 [randw-4K-n8-c8]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=8
@@ -55,7 +55,7 @@ cpus_allowed=0-7
 stonewall
 
 [randw-4K-n12-c12]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=12
@@ -65,7 +65,7 @@ cpus_allowed=0-11
 stonewall
 
 [randw-4K-n16-c16]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=16
@@ -75,7 +75,7 @@ cpus_allowed=0-15
 stonewall
 
 [randw-4K-n20-c20]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=20
@@ -85,7 +85,7 @@ cpus_allowed=0-19
 stonewall
 
 [randw-4K-n24-c24]
-runtime=30
+#runtime=30
 bs=4K
 iodepth=32
 numjobs=24
