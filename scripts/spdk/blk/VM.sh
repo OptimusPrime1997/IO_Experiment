@@ -7,7 +7,7 @@ echo "sleep 10s for vhost to start"
 sleep 10
 i=1
 while [ $i -le $NUM ];do
-	echo "sudo bash /home/ljh/exp/scripts/spdk/bridge/gen_qemu_spdk02_02.sh 0"$i
-	sudo bash /home/ljh/exp/scripts/spdk/bridge/gen_qemu_spdk02_02.sh 0$i
+	echo "sudo bash /home/ljh/exp/scripts/spdk/blk/gen_qemu_spdk02_02.sh 0"$i
+	sudo bash /home/ljh/exp/scripts/spdk/blk/gen_qemu_spdk02_02.sh 0$i
 	i=$(($i+1))
 done

@@ -3,7 +3,7 @@ echo "start qemu"
 script=$1
 dir=$2
 
-sudo bash /home/ljh/exp/scripts/spdk/bridge/$script
+sudo bash /home/ljh/exp/scripts/spdk/blk/$script
 
 sleep 60
 echo "execute test"

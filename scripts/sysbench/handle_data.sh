@@ -1,5 +1,11 @@
 #!/bin/bash
 dir=$1
+tmp=$(echo $dir | sed 's/\(.*\/\)\(.*\)/\1/')
+preLen=${#tmp}
+#echo $preLen
+filename=`expr substr $dir $(($preLen+1)) ${#dir}`
+echo $filename
+#exit
 files=`ls -l $dir|grep log |awk '{print $9}'`
 allStr=''
 for data in ${files[@]}
@@ -9,6 +15,6 @@ do
 	#echo $result > $resultfile
 	allStr=$allStr$result"\n"
 done
-echo -e $allStr > $dir"/allStr.csv"
+echo -e $allStr > $dir"/"$filename".csv"
 
 

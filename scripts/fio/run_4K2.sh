@@ -7,9 +7,9 @@ N=$5
 V=$6
 T=$7
 
-dir="/home/ljh/exp/logs/fio/blk/"$D
+dir="/home/ljh/exp/logs/fio/mdev/"$D
 if [ ! -d $dir ];then
-	mkdir $dir
+	mkdir -p  $dir
 fi
-fio /home/ljh/exp/scripts/fio/$R > $dir"/4K2_s"$S"_q"$Q"_"$N"_v"$V"_"$T".log"
+fio /home/ljh/exp/scripts/fio/${R}.fio > $dir"/${R}_s"$S"_q"$Q"_"$N"_v"$V"_"$T".log"
 

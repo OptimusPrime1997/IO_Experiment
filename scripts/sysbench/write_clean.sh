@@ -1,5 +1,5 @@
 #/bin/bash
-IP='192.168.122.77'
+IP=$1
 PORT='3306'
 
 sudo sysbench /usr/share/sysbench/oltp_write_only.lua --threads=4 --events=0 --time=60 --mysql-host=$IP --mysql-user=root --mysql-password=123456 --mysql-port=$PORT  --db-driver=mysql --tables=10 --table-size=1000000 --range_selects=off --db-ps-mode=disable --report-interval=10 cleanup

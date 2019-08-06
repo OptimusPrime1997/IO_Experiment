@@ -10,12 +10,12 @@ ioengine=libaio
 ## Test 3
 # ioengine=pvsync2
 # hipri
-percentile_list=10:20:30:40:50:70:90:99:99.9:99.99:99.999
+percentile_list=50:99:99.99:99.999
 
 
 [precondition]
-runtime=15
-bs=128K
+runtime=30
+bs=124K
 iodepth=16
 numjobs=1
 rw=write
@@ -24,7 +24,7 @@ stonewall
 
 
 [rand-read-4K-qd1]
-runtime=30
+runtime=90
 bs=4K
 iodepth=1
 numjobs=1
@@ -34,7 +34,7 @@ stonewall
 
 
 [rand-write-4K-qd1]
-runtime=30
+runtime=90
 bs=4K
 iodepth=1
 numjobs=1
@@ -44,69 +44,36 @@ stonewall
 
 
 [rand-read-4K-qd16]
-runtime=30
+runtime=90
 bs=4K
-iodepth=4
-numjobs=2
+iodepth=32
+numjobs=4
 group_reporting
 rw=randread
-cpus_allowed=0-1
+cpus_allowed=0
 stonewall
 
 
 [rand-write-4K-qd16]
-runtime=30
+runtime=90
 bs=4K
-iodepth=4
-numjobs=2
+iodepth=32
+numjobs=4
 group_reporting
 rw=randwrite
-cpus_allowed=0-1
+cpus_allowed=0
 stonewall
 
 
 [rand-rw-4K-qd16]
-runtime=30
+runtime=90
 bs=4K
-iodepth=4
-numjobs=2
+iodepth=32
+numjobs=4
 group_reporting
 rw=randrw
 rwmixread=70
 rwmixwrite=30
-cpus_allowed=0-1
+cpus_allowed=0
 stonewall
 
-
-[rand-read-4K-qd128]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=2
-group_reporting
-rw=randread
-cpus_allowed=0-1
-stonewall
-
-
-[rand-write-4K-qd128]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=2
-group_reporting
-rw=randwrite
-cpus_allowed=0-1
-stonewall
-
-[rand-rw-4K-qd128]
-runtime=30
-bs=4K
-iodepth=32
-numjobs=2
-group_reporting
-rw=randrw
-rwmixread=70
-rwmixwrite=30
-cpus_allowed=0-1
-stonewall

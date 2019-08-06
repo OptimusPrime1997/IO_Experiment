@@ -1,0 +1,15 @@
+sysbench 1.1.0-faaff4f (using bundled LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 4
+Report intermediate results every 10 second(s)
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+[ 10s ] thds: 4 tps: 4265.33 qps: 51185.39 (r/w/o: 42654.32/0.00/8531.06) lat (ms,95%): 1.14 err/s: 0.00 reconn/s: 0.00
+[ 20s ] thds: 4 tps: 4494.18 qps: 53930.45 (r/w/o: 44942.09/0.00/8988.36) lat (ms,95%): 1.03 err/s: 0.00 reconn/s: 0.00
+[ 30s ] thds: 4 tps: 4239.20 qps: 50871.22 (r/w/o: 42392.82/0.00/8478.40) lat (ms,95%): 1.12 err/s: 0.00 reconn/s: 0.00

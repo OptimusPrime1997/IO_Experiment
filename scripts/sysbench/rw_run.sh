@@ -1,7 +1,7 @@
 #/bin/bash
 CPU=$1
 MEM=$2
-IP='192.168.122.77'
+IP=$3
 PORT=3306
 d=`date +%Y%m%d%H%M%S`
 date=`date +%Y%m%d`
