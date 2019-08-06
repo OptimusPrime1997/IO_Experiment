@@ -2,6 +2,7 @@
 dir=$1
 files=`ls -l $dir|grep log |awk '{print $9}'`
 allStr=''
+allTpmc=''
 for data in ${files[@]}
 do
 	echo $data
@@ -13,9 +14,10 @@ do
 	resultfile=`echo $dir"/"$data | sed 's/\.log/\.csv/g'`
 	echo "resultfile:"$resultfile
 	allStr=$allStr$avg","$tpmc"\n"
+	allTpmc=${allTpmc}${tpmc}"\n"
 	#echo $avg","$tpmc > $resultfile
 done
-echo -e $allStr
-echo -e $allStr > $dir"/allStr.csv"
+echo -e ${allStr}${allTpmc}
+echo -e ${allStr}${allTpmc} > $dir"/allStr.csv"
 
 
