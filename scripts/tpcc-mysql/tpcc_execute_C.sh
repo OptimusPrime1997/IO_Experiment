@@ -2,6 +2,7 @@
 #excute
 CPU=$1
 ALL=`cat /proc/cpuinfo |grep processor | awk '{print $3}' | tail -n 1`
+ALL=12
 MEM=`free -h  |grep Mem | awk '{print $2}' | awk -F 'G' '{print $1}'`
 MEM=$((${MEM//.*/+1}))
 echo "MEM="$MEM
@@ -15,7 +16,8 @@ renice -n -20 -p ${mysql_pid}
 
 d=`date +%Y%m%d%H%M%S`
 date=`date +%Y%m%d%H%M`
-IPTEMP=`expr substr $IP 13 2`
+start=$((${#IP}-1))
+IPTEMP=`expr substr $IP $start 2`
 date=$date"_"$IPTEMP
 op='rw'
 ts=(1 2 4 8 16 32 64)
