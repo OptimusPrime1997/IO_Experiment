@@ -2,12 +2,13 @@
 #start NUM VMs
 NUM=$1
 QUEUE=$2
+
 #remove nvme module at first
 #rmmod nvme
 #load nvme-mdev module
 modprobe nvme-mdev
 #allocate hw queue
-modprobe nvme mdev_queues=32
+modprobe nvme mdev_queues=36
 
 #to remove other devices
 for dir in $(ls /sys/bus/mdev/devices/)
@@ -32,7 +33,11 @@ while [ $i -le $NUM ];do
 	if [ $p -ge 4 ];then
 		p=$(($p+1))
 	fi
-	echo n1p${p} > ${MDEV_DEVICE_1}/namespaces/add_namespace
+	if [ $NUM -le 1 ];then
+		echo n1 > ${MDEV_DEVICE_1}/namespaces/add_namespace
+	else
+		echo n1p${p} > ${MDEV_DEVICE_1}/namespaces/add_namespace
+	fi
 #cpu number start from 0
 	echo $(($i*2-2)) > ${MDEV_DEVICE_1}/settings/iothread_cpu
 	
@@ -43,7 +48,7 @@ while [ $i -le $NUM ];do
 	MAC="52:54:00:12:34:"$N
 
 	/usr/local/bin/qemu-system-x86_64 \
-	    -m 2G \
+	    -m 4G \
 	    -smp 13 \
 	    -M pc \
 	    -name mdev-${N} \
