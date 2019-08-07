@@ -1,0 +1,67 @@
+***************************************
+*** ###easy### TPC-C Load Generator ***
+***************************************
+option h with value '192.168.122.79'
+option P with value '3306'
+option d with value 'benchmarker'
+option u with value 'root'
+option p with value '123456'
+option w with value '11'
+option c with value '24'
+option r with value '22'
+option l with value '60'
+option i with value '10'
+<Parameters>
+     [server]: 192.168.122.79
+     [port]: 3306
+     [DBname]: benchmarker
+       [user]: root
+       [pass]: 123456
+  [warehouse]: 11
+ [connection]: 24
+     [rampup]: 22 (sec.)
+    [measure]: 60 (sec.)
+
+RAMP-UP TIME.(22 sec.)
+
+MEASURING START.
+
+  10, trx: 3159, 95%: 72.280, 99%: 95.854, max_rt: 246.503, 3157|179.532, 316|41.648, 317|279.749, 316|443.562
+  20, trx: 3222, 95%: 68.141, 99%: 85.727, max_rt: 135.277, 3219|102.395, 322|33.366, 321|176.220, 322|327.444
+  30, trx: 3182, 95%: 70.760, 99%: 91.755, max_rt: 173.142, 3180|88.001, 318|40.735, 319|208.992, 317|250.296
+  40, trx: 3308, 95%: 69.501, 99%: 90.284, max_rt: 123.684, 3313|109.433, 331|26.641, 331|208.598, 333|249.781
+  50, trx: 3225, 95%: 71.570, 99%: 87.937, max_rt: 152.432, 3222|105.210, 322|28.789, 321|181.773, 320|254.961
+  60, trx: 3274, 95%: 70.212, 99%: 83.849, max_rt: 130.398, 3266|87.243, 328|32.017, 328|224.450, 329|248.700
+
+STOPPING THREADS........................
+
+<Raw Results>
+  [0] sc:50 lt:19320  rt:0  fl:0 avg_rt: 52.2 (5)
+  [1] sc:4035 lt:15323  rt:0  fl:0 avg_rt: 16.8 (5)
+  [2] sc:1205 lt:732  rt:0  fl:0 avg_rt: 6.9 (5)
+  [3] sc:521 lt:1416  rt:0  fl:0 avg_rt: 135.8 (80)
+  [4] sc:0 lt:1937  rt:0  fl:0 avg_rt: 182.4 (20)
+ in 60 sec.
+
+<Raw Results2(sum ver.)>
+  [0] sc:50  lt:19320  rt:0  fl:0 
+  [1] sc:4035  lt:15327  rt:0  fl:0 
+  [2] sc:1205  lt:732  rt:0  fl:0 
+  [3] sc:521  lt:1416  rt:0  fl:0 
+  [4] sc:0  lt:1937  rt:0  fl:0 
+
+<Constraint Check> (all must be [OK])
+ [transaction percentage]
+        Payment: 43.46% (>=43.0%) [OK]
+   Order-Status: 4.35% (>= 4.0%) [OK]
+       Delivery: 4.35% (>= 4.0%) [OK]
+    Stock-Level: 4.35% (>= 4.0%) [OK]
+ [response time (at least 90% passed)]
+      New-Order: 0.26%  [NG] *
+        Payment: 20.84%  [NG] *
+   Order-Status: 62.21%  [NG] *
+       Delivery: 26.90%  [NG] *
+    Stock-Level: 0.00%  [NG] *
+
+<TpmC>
+                 19370.000 TpmC
