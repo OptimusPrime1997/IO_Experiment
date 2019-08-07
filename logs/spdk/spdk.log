@@ -1,0 +1,445 @@
+[ DPDK EAL parameters: vhost --no-shconf -c 0x55 -m 4096 --base-virtaddr=0x200000000000 --file-prefix=spdk_pid41542 ]
+EAL: Detected 56 lcore(s)
+EAL: Detected 2 NUMA nodes
+EAL: No free hugepages reported in hugepages-1048576kB
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+app.c: 602:spdk_app_start: *NOTICE*: Total cores available: 4
+reactor.c: 703:spdk_reactors_init: *NOTICE*: Occupied cpu socket mask is 0x1
+thread.c: 163:spdk_allocate_thread: *DEBUG*: Allocating new thread reactor_2
+reactor.c: 490:_spdk_reactor_run: *NOTICE*: Reactor started on core 2 on socket 0
+thread.c: 163:spdk_allocate_thread: *DEBUG*: Allocating new thread reactor_6
+reactor.c: 490:_spdk_reactor_run: *NOTICE*: Reactor started on core 6 on socket 0
+thread.c: 163:spdk_allocate_thread: *DEBUG*: Allocating new thread reactor_0
+reactor.c: 490:_spdk_reactor_run: *NOTICE*: Reactor started on core 0 on socket 0
+thread.c: 163:spdk_allocate_thread: *DEBUG*: Allocating new thread reactor_4
+reactor.c: 490:_spdk_reactor_run: *NOTICE*: Reactor started on core 4 on socket 0
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device memcpy_engine (0x55cdef27f360) on thread reactor_0
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device copy_module (0x55cdef27f350) on thread reactor_0
+bdev_raid.c:1096:raid_bdev_get_ctx_size: *DEBUG*: raid_bdev_get_ctx_size
+bdev_raid.c:1096:raid_bdev_get_ctx_size: *DEBUG*: raid_bdev_get_ctx_size
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0
+bdev_raid.c:1222:raid_bdev_init: *DEBUG*: raid_bdev_init completed successfully
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device null_bdev (0x55cdef28f090) on thread reactor_0
+EAL: PCI device 0000:06:00.0 on NUMA socket 0
+EAL:   probe driver: 8086:2700 spdk_nvme
+EAL:   using IOMMU type 1 (Type 1)
+bdev_nvme.c: 846:probe_cb: *DEBUG*: Probing device 0000:06:00.0
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to delay init (no timeout)
+nvme_quirks.c: 109:nvme_get_quirks: *DEBUG*: Searching for 8086:2700 [8086:3900]...
+nvme_quirks.c: 138:nvme_get_quirks: *DEBUG*: No quirks found.
+nvme_pcie.c: 988:nvme_pcie_qpair_construct: *INFO*: max_completions_cap = 32 num_trackers = 96
+nvme_ctrlr.c: 689:nvme_ctrlr_set_state: *DEBUG*: setting state to init (timeout 2000 ms)
+nvme_ctrlr.c:1890:nvme_ctrlr_process_init: *DEBUG*: Adding 2 second delay before initializing the controller
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 1 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 1 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+nvme_ctrlr.c: 689:nvme_ctrlr_set_state: *DEBUG*: setting state to disable and wait for CSTS.RDY = 0 (timeout 2000 ms)
+nvme_ctrlr.c:1957:nvme_ctrlr_process_init: *DEBUG*: CC.EN = 0 && CSTS.RDY = 0
+nvme_ctrlr.c: 689:nvme_ctrlr_set_state: *DEBUG*: setting state to enable controller by writing CC.EN = 1 (timeout 2000 ms)
+nvme_ctrlr.c:1969:nvme_ctrlr_process_init: *DEBUG*: Setting CC.EN = 1
+nvme_ctrlr.c: 689:nvme_ctrlr_set_state: *DEBUG*: setting state to wait for CSTS.RDY = 1 (timeout 2000 ms)
+nvme_ctrlr.c:1976:nvme_ctrlr_process_init: *DEBUG*: CC.EN = 1 && CSTS.RDY = 1 - controller is ready
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to enable admin queue (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to identify controller (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to wait for identify controller (no timeout)
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f1810000 len:4096
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664e10000
+nvme_ctrlr.c: 852:nvme_ctrlr_identify_done: *DEBUG*: transport max_xfer_size 2072576
+nvme_ctrlr.c: 856:nvme_ctrlr_identify_done: *DEBUG*: MDTS max_xfer_size 131072
+nvme_ctrlr.c: 859:nvme_ctrlr_identify_done: *DEBUG*: CNTLID 0x0000
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to set number of queues (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to wait for set number of queues (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to get number of queues (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to wait for get number of queues (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to construct namespaces (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to identify active ns (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to identify ns (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to wait for identify ns (no timeout)
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f180c000 len:4096
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664e0c000
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to identify namespace id descriptors (no timeout)
+nvme_ctrlr.c:1093:nvme_ctrlr_identify_id_desc_namespaces: *DEBUG*: Version < 1.3; not attempting to retrieve NS ID Descriptor List
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to configure AER (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to configure AER (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to wait for configure aer (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to set supported log pages (no timeout)
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f180d000 len:512
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664e0d000
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to set supported features (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to set doorbell buffer config (no timeout)
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to set keep alive timeout (no timeout)
+nvme_ctrlr.c:1255:nvme_ctrlr_set_keep_alive_timeout: *DEBUG*: Controller KAS is 0 - not enabling Keep Alive
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to set host ID (no timeout)
+nvme_ctrlr.c:1317:nvme_ctrlr_set_host_id: *DEBUG*: Using 64-bit host identifier
+nvme_ctrlr.c:1325:nvme_ctrlr_set_host_id: *DEBUG*: User did not specify host ID - not sending Set Features - Host ID
+nvme_ctrlr.c: 685:nvme_ctrlr_set_state: *DEBUG*: setting state to ready (no timeout)
+bdev_nvme.c:1066:attach_cb: *DEBUG*: Attached to 0000:06:00.0 (Nvme1)
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device Nvme1 (0x2000f181ba00) on thread reactor_0
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0
+bdev.c:3348:spdk_bdev_start: *DEBUG*: Inserting bdev Nvme1n1 into list
+bdev_raid.c:1617:raid_bdev_examine: *DEBUG*: bdev Nvme1n1 can't be claimed
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+vbdev_split.c: 236:vbdev_split_create: *DEBUG*: Split size not specified by user
+vbdev_split.c: 249:vbdev_split_create: *DEBUG*: base_bdev: Nvme1n1 split_count: 4 split_size_blocks: 234425772
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf116a2a0 for bdev Nvme1n1 on thread 0x55cdf1080910
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device Nvme1n1p0 (0x55cdf116a2e0) on thread reactor_0
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) on thread reactor_0
+bdev.c:3348:spdk_bdev_start: *DEBUG*: Inserting bdev Nvme1n1p0 into list
+bdev_raid.c:1617:raid_bdev_examine: *DEBUG*: bdev Nvme1n1p0 can't be claimed
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf116a680 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a6c0 for io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) on thread reactor_0 refcnt 1
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf1169f40 for io_device Nvme1n1p0 (0x55cdf116a2e0) on thread reactor_0 refcnt 1
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 1
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a820 for io_device Nvme1 (0x2000f181ba00) on thread reactor_0 refcnt 1
+nvme_pcie.c: 988:nvme_pcie_qpair_construct: *INFO*: max_completions_cap = 64 num_trackers = 192
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 2
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 64 blocks with offset 0
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f1805fc0 len:32768
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664e05fc0
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[0] = 0x664e06000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[1] = 0x664e07000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[2] = 0x664e08000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[3] = 0x664e09000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[4] = 0x664e0a000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[5] = 0x664e0b000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[6] = 0x664e0c000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[7] = 0x664e0d000
+nvme_pcie.c:1746:nvme_pcie_prp_list_append: *DEBUG*: prp2 = 0x6647fe030 (PRP list)
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf116aac0 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+blobstore.c:3137:spdk_bs_load: *DEBUG*: Loading blobstore from dev 0x55cdf116aa40
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device blobstore (0x55cdf116ab40) on thread reactor_0
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116acd0 for io_device blobstore (0x55cdf116ab40) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a6c0 for io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) on thread reactor_0 refcnt 2
+request.c: 154:spdk_bs_sequence_read_dev: *DEBUG*: Reading 8 blocks from LBA 0
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 8 blocks with offset 0
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f1801000 len:4096
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664e01000
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device Nvme1n1p1 (0x55cdf117cdd0) on thread reactor_0
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device bdev_Nvme1n1p1 (0x55cdf117cde1) on thread reactor_0
+bdev.c:3348:spdk_bdev_start: *DEBUG*: Inserting bdev Nvme1n1p1 into list
+bdev_raid.c:1617:raid_bdev_examine: *DEBUG*: bdev Nvme1n1p1 can't be claimed
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf117d140 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf117d180 for io_device bdev_Nvme1n1p1 (0x55cdf117cde1) on thread reactor_0 refcnt 1
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf117d230 for io_device Nvme1n1p1 (0x55cdf117cdd0) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 2
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 3
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 64 blocks with offset 0xdf90dac
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f166ef80 len:32768
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x66486ef80
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[0] = 0x66486f000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[1] = 0x664870000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[2] = 0x664871000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[3] = 0x664872000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[4] = 0x664873000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[5] = 0x664874000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[6] = 0x664875000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[7] = 0x664876000
+nvme_pcie.c:1746:nvme_pcie_prp_list_append: *DEBUG*: prp2 = 0x6647fc030 (PRP list)
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf117d390 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+blobstore.c:3137:spdk_bs_load: *DEBUG*: Loading blobstore from dev 0x55cdf117d310
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device blobstore (0x55cdf117d410) on thread reactor_0
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf117d5a0 for io_device blobstore (0x55cdf117d410) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf117d180 for io_device bdev_Nvme1n1p1 (0x55cdf117cde1) on thread reactor_0 refcnt 2
+request.c: 154:spdk_bs_sequence_read_dev: *DEBUG*: Reading 8 blocks from LBA 0
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 8 blocks with offset 0xdf90dac
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f166a000 len:4096
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x66486a000
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device Nvme1n1p2 (0x55cdf118f6a0) on thread reactor_0
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p1
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) on thread reactor_0
+bdev.c:3348:spdk_bdev_start: *DEBUG*: Inserting bdev Nvme1n1p2 into list
+bdev_raid.c:1617:raid_bdev_examine: *DEBUG*: bdev Nvme1n1p2 can't be claimed
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf118fa10 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf118fa50 for io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) on thread reactor_0 refcnt 1
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf118fb00 for io_device Nvme1n1p2 (0x55cdf118f6a0) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 3
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 4
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 64 blocks with offset 0x1bf21b58
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f1661fc0 len:32768
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664861fc0
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[0] = 0x664862000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[1] = 0x664863000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[2] = 0x664864000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[3] = 0x664865000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[4] = 0x664866000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[5] = 0x664867000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[6] = 0x664868000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[7] = 0x664869000
+nvme_pcie.c:1746:nvme_pcie_prp_list_append: *DEBUG*: prp2 = 0x6647fa030 (PRP list)
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf118fc60 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+blobstore.c:3137:spdk_bs_load: *DEBUG*: Loading blobstore from dev 0x55cdf118fbe0
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device blobstore (0x55cdf118fce0) on thread reactor_0
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf118fe70 for io_device blobstore (0x55cdf118fce0) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf118fa50 for io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) on thread reactor_0 refcnt 2
+request.c: 154:spdk_bs_sequence_read_dev: *DEBUG*: Reading 8 blocks from LBA 0
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 8 blocks with offset 0x1bf21b58
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f165d000 len:4096
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x66485d000
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device Nvme1n1p3 (0x55cdf11a1f70) on thread reactor_0
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p2
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) on thread reactor_0
+bdev.c:3348:spdk_bdev_start: *DEBUG*: Inserting bdev Nvme1n1p3 into list
+bdev_raid.c:1617:raid_bdev_examine: *DEBUG*: bdev Nvme1n1p3 can't be claimed
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf11a22e0 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf11a2320 for io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) on thread reactor_0 refcnt 1
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf11a23d0 for io_device Nvme1n1p3 (0x55cdf11a1f70) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 4
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 5
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 64 blocks with offset 0x29eb2904
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f1654fc0 len:32768
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664854fc0
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[0] = 0x664855000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[1] = 0x664856000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[2] = 0x664857000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[3] = 0x664858000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[4] = 0x664859000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[5] = 0x66485a000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[6] = 0x66485b000
+nvme_pcie.c:1727:nvme_pcie_prp_list_append: *DEBUG*: prp[7] = 0x66485c000
+nvme_pcie.c:1746:nvme_pcie_prp_list_append: *DEBUG*: prp2 = 0x6647f8030 (PRP list)
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf11a2530 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+blobstore.c:3137:spdk_bs_load: *DEBUG*: Loading blobstore from dev 0x55cdf11a24b0
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device blobstore (0x55cdf11a25b0) on thread reactor_0
+thread.c: 526:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf11a2740 for io_device blobstore (0x55cdf11a25b0) on thread reactor_0 refcnt 1
+thread.c: 500:spdk_get_io_channel: *DEBUG*: Get io_channel 0x55cdf11a2320 for io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) on thread reactor_0 refcnt 2
+request.c: 154:spdk_bs_sequence_read_dev: *DEBUG*: Reading 8 blocks from LBA 0
+bdev_nvme.c: 196:bdev_nvme_readv: *DEBUG*: read 8 blocks with offset 0x29eb2904
+nvme_pcie.c:1691:nvme_pcie_prp_list_append: *DEBUG*: prp_index:0 virt_addr:0x2000f1650000 len:4096
+nvme_pcie.c:1718:nvme_pcie_prp_list_append: *DEBUG*: prp1 = 0x664850000
+thread.c: 378:spdk_io_device_register: *DEBUG*: Registering io_device aio_module (0x55cdef27e960) on thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a6c0 for io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) on thread reactor_0 refcnt 2
+gpt.c: 172:spdk_gpt_check_mbr: *DEBUG*: Signature mismatch, provided=0,expected=aa55
+gpt.c: 220:spdk_gpt_parse: *DEBUG*: Failed to detect gpt in MBR
+vbdev_gpt.c: 357:spdk_gpt_bdev_complete: *DEBUG*: Failed to parse gpt
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf116a680 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+vbdev_lvol.c:1236:_vbdev_lvs_examine_cb: *INFO*: Lvol store not found on Nvme1n1p0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116acd0 for io_device blobstore (0x55cdf116ab40) on thread reactor_0 refcnt 1
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device blobstore (0x55cdf116ab40) from thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf117d180 for io_device bdev_Nvme1n1p1 (0x55cdf117cde1) on thread reactor_0 refcnt 2
+gpt.c: 172:spdk_gpt_check_mbr: *DEBUG*: Signature mismatch, provided=c800,expected=aa55
+gpt.c: 220:spdk_gpt_parse: *DEBUG*: Failed to detect gpt in MBR
+vbdev_gpt.c: 357:spdk_gpt_bdev_complete: *DEBUG*: Failed to parse gpt
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf117d140 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+vbdev_lvol.c:1236:_vbdev_lvs_examine_cb: *INFO*: Lvol store not found on Nvme1n1p1
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf117d5a0 for io_device blobstore (0x55cdf117d410) on thread reactor_0 refcnt 1
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device blobstore (0x55cdf117d410) from thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf118fa50 for io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) on thread reactor_0 refcnt 2
+gpt.c: 172:spdk_gpt_check_mbr: *DEBUG*: Signature mismatch, provided=7000,expected=aa55
+gpt.c: 220:spdk_gpt_parse: *DEBUG*: Failed to detect gpt in MBR
+vbdev_gpt.c: 357:spdk_gpt_bdev_complete: *DEBUG*: Failed to parse gpt
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf118fa10 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+vbdev_lvol.c:1236:_vbdev_lvs_examine_cb: *INFO*: Lvol store not found on Nvme1n1p2
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf118fe70 for io_device blobstore (0x55cdf118fce0) on thread reactor_0 refcnt 1
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device blobstore (0x55cdf118fce0) from thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf11a2320 for io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) on thread reactor_0 refcnt 2
+gpt.c: 172:spdk_gpt_check_mbr: *DEBUG*: Signature mismatch, provided=0,expected=aa55
+gpt.c: 220:spdk_gpt_parse: *DEBUG*: Failed to detect gpt in MBR
+vbdev_gpt.c: 357:spdk_gpt_bdev_complete: *DEBUG*: Failed to parse gpt
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf11a22e0 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+vbdev_lvol.c:1236:_vbdev_lvs_examine_cb: *INFO*: Lvol store not found on Nvme1n1p3
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf11a22e0 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+VHOST_CONFIG: vhost-user server: socket created, fd: 27
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.01
+vhost.c: 760:spdk_vhost_dev_register: *INFO*: Controller vhost.01: new controller added
+vhost_blk.c: 866:spdk_vhost_blk_construct: *INFO*: Controller vhost.01: using bdev 'Nvme1n1p0'
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p1
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf118fba0 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+VHOST_CONFIG: vhost-user server: socket created, fd: 28
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.02
+vhost.c: 760:spdk_vhost_dev_register: *INFO*: Controller vhost.02: new controller added
+vhost_blk.c: 866:spdk_vhost_blk_construct: *INFO*: Controller vhost.02: using bdev 'Nvme1n1p1'
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p2
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf117d2d0 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+VHOST_CONFIG: vhost-user server: socket created, fd: 29
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.03
+vhost.c: 760:spdk_vhost_dev_register: *INFO*: Controller vhost.03: new controller added
+vhost_blk.c: 866:spdk_vhost_blk_construct: *INFO*: Controller vhost.03: using bdev 'Nvme1n1p2'
+bdev.c: 314:spdk_bdev_first: *DEBUG*: Starting bdev iteration at Nvme1n1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p0
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p1
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p2
+bdev.c: 327:spdk_bdev_next: *DEBUG*: Continuing bdev iteration at Nvme1n1p3
+bdev.c:3496:spdk_bdev_open: *DEBUG*: Opening descriptor 0x55cdf116aa00 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+VHOST_CONFIG: vhost-user server: socket created, fd: 30
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.04
+vhost.c: 760:spdk_vhost_dev_register: *INFO*: Controller vhost.04: new controller added
+vhost_blk.c: 866:spdk_vhost_blk_construct: *INFO*: Controller vhost.04: using bdev 'Nvme1n1p3'
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf11a2740 for io_device blobstore (0x55cdf11a25b0) on thread reactor_0 refcnt 1
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device blobstore (0x55cdf11a25b0) from thread reactor_0
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 6 voluntary context switches and 6 involuntary context switches in the last second.
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf116acd0 for io_device blobstore (0x55cdf116ab40). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a6c0 for io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) on thread reactor_0 refcnt 1
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device blobstore (0x55cdf116ab40) needs to unregister from thread reactor_0
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf117d5a0 for io_device blobstore (0x55cdf117d410). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf117d180 for io_device bdev_Nvme1n1p1 (0x55cdf117cde1) on thread reactor_0 refcnt 1
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device blobstore (0x55cdf117d410) needs to unregister from thread reactor_0
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf118fe70 for io_device blobstore (0x55cdf118fce0). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf118fa50 for io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) on thread reactor_0 refcnt 1
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device blobstore (0x55cdf118fce0) needs to unregister from thread reactor_0
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf11a2740 for io_device blobstore (0x55cdf11a25b0). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf11a2320 for io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) on thread reactor_0 refcnt 1
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device blobstore (0x55cdf11a25b0) needs to unregister from thread reactor_0
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf116a6c0 for io_device bdev_Nvme1n1p0 (0x55cdf116a2f1). Channel thread 0x55cdf1080910. Current thread reactor_0
+bdev.c:1913:spdk_bdev_channel_destroy: *DEBUG*: Destroying channel 0x55cdf116a6f0 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf1169f40 for io_device Nvme1n1p0 (0x55cdf116a2e0) on thread reactor_0 refcnt 1
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 5
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device blobstore (0x55cdf116ab40) on thread reactor_0
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf116aac0 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf117d180 for io_device bdev_Nvme1n1p1 (0x55cdf117cde1). Channel thread 0x55cdf1080910. Current thread reactor_0
+bdev.c:1913:spdk_bdev_channel_destroy: *DEBUG*: Destroying channel 0x55cdf117d1b0 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf117d230 for io_device Nvme1n1p1 (0x55cdf117cdd0) on thread reactor_0 refcnt 1
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 4
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device blobstore (0x55cdf117d410) on thread reactor_0
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf117d390 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf118fa50 for io_device bdev_Nvme1n1p2 (0x55cdf118f6b1). Channel thread 0x55cdf1080910. Current thread reactor_0
+bdev.c:1913:spdk_bdev_channel_destroy: *DEBUG*: Destroying channel 0x55cdf118fa80 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf118fb00 for io_device Nvme1n1p2 (0x55cdf118f6a0) on thread reactor_0 refcnt 1
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 3
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device blobstore (0x55cdf118fce0) on thread reactor_0
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf118fc60 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf11a2320 for io_device bdev_Nvme1n1p3 (0x55cdf11a1f81). Channel thread 0x55cdf1080910. Current thread reactor_0
+bdev.c:1913:spdk_bdev_channel_destroy: *DEBUG*: Destroying channel 0x55cdf11a2350 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf11a23d0 for io_device Nvme1n1p3 (0x55cdf11a1f70) on thread reactor_0 refcnt 1
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 2
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device blobstore (0x55cdf11a25b0) on thread reactor_0
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf11a2530 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf1169f40 for io_device Nvme1n1p0 (0x55cdf116a2e0). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 4
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf117d230 for io_device Nvme1n1p1 (0x55cdf117cdd0). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 3
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf118fb00 for io_device Nvme1n1p2 (0x55cdf118f6a0). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 2
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf11a23d0 for io_device Nvme1n1p3 (0x55cdf11a1f70). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0 refcnt 1
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf116a770 for io_device bdev_Nvme1n1 (0x55cdf107de51). Channel thread 0x55cdf1080910. Current thread reactor_0
+bdev.c:1913:spdk_bdev_channel_destroy: *DEBUG*: Destroying channel 0x55cdf116a7a0 for bdev Nvme1n1 on thread 0x55cdf1080910
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a820 for io_device Nvme1 (0x2000f181ba00) on thread reactor_0 refcnt 1
+thread.c: 599:spdk_put_io_channel: *DEBUG*: Putting io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0 refcnt 1
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf116a820 for io_device Nvme1 (0x2000f181ba00). Channel thread 0x55cdf1080910. Current thread reactor_0
+thread.c: 553:_spdk_put_io_channel: *DEBUG*: Releasing io_channel 0x55cdf116a8d0 for io_device bdev_mgr (0x55cdef27f2c0). Channel thread 0x55cdf1080910. Current thread reactor_0
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 1 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 3 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 3 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 3 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 3 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 3 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 2: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 6: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 4: 0 voluntary context switches and 1 involuntary context switches in the last second.
+reactor.c: 341:get_rusage: *INFO*: Reactor 0: 0 voluntary context switches and 2 involuntary context switches in the last second.
+^Cvhost.c:1216:session_shutdown: *INFO*: Exiting
+vhost.c: 783:spdk_vhost_dev_unregister: *INFO*: Controller vhost.01: removed
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf11a22e0 for bdev Nvme1n1p0 on thread 0x55cdf1080910
+vhost.c: 783:spdk_vhost_dev_unregister: *INFO*: Controller vhost.02: removed
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf118fba0 for bdev Nvme1n1p1 on thread 0x55cdf1080910
+vhost.c: 783:spdk_vhost_dev_unregister: *INFO*: Controller vhost.03: removed
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf117d2d0 for bdev Nvme1n1p2 on thread 0x55cdf1080910
+vhost.c: 783:spdk_vhost_dev_unregister: *INFO*: Controller vhost.04: removed
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf116aa00 for bdev Nvme1n1p3 on thread 0x55cdf1080910
+bdev_raid.c:1065:raid_bdev_fini_start: *DEBUG*: raid_bdev_fini_start
+bdev.c: 993:_spdk_bdev_finish_unregister_bdevs_iter: *DEBUG*: Unregistering bdev 'Nvme1n1p3'
+bdev.c:3431:spdk_bdev_unregister: *DEBUG*: Removing bdev Nvme1n1p3 from list
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device bdev_Nvme1n1p3 (0x55cdf11a1f81) on thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device Nvme1n1p3 (0x55cdf11a1f70) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device Nvme1n1p3 (0x55cdf11a1f70) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device Nvme1n1p3 (0x55cdf11a1f70) on thread reactor_0
+bdev.c: 993:_spdk_bdev_finish_unregister_bdevs_iter: *DEBUG*: Unregistering bdev 'Nvme1n1p2'
+bdev.c:3431:spdk_bdev_unregister: *DEBUG*: Removing bdev Nvme1n1p2 from list
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device bdev_Nvme1n1p2 (0x55cdf118f6b1) on thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device Nvme1n1p2 (0x55cdf118f6a0) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device Nvme1n1p2 (0x55cdf118f6a0) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device Nvme1n1p2 (0x55cdf118f6a0) on thread reactor_0
+bdev.c: 993:_spdk_bdev_finish_unregister_bdevs_iter: *DEBUG*: Unregistering bdev 'Nvme1n1p1'
+bdev.c:3431:spdk_bdev_unregister: *DEBUG*: Removing bdev Nvme1n1p1 from list
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device bdev_Nvme1n1p1 (0x55cdf117cde1) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device bdev_Nvme1n1p1 (0x55cdf117cde1) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device bdev_Nvme1n1p1 (0x55cdf117cde1) on thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device Nvme1n1p1 (0x55cdf117cdd0) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device Nvme1n1p1 (0x55cdf117cdd0) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device Nvme1n1p1 (0x55cdf117cdd0) on thread reactor_0
+bdev.c: 993:_spdk_bdev_finish_unregister_bdevs_iter: *DEBUG*: Unregistering bdev 'Nvme1n1p0'
+bdev.c:3431:spdk_bdev_unregister: *DEBUG*: Removing bdev Nvme1n1p0 from list
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device bdev_Nvme1n1p0 (0x55cdf116a2f1) on thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device Nvme1n1p0 (0x55cdf116a2e0) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device Nvme1n1p0 (0x55cdf116a2e0) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device Nvme1n1p0 (0x55cdf116a2e0) on thread reactor_0
+bdev.c:3529:spdk_bdev_close: *DEBUG*: Closing descriptor 0x55cdf116a2a0 for bdev Nvme1n1 on thread 0x55cdf1080910
+bdev.c: 993:_spdk_bdev_finish_unregister_bdevs_iter: *DEBUG*: Unregistering bdev 'Nvme1n1'
+bdev.c:3431:spdk_bdev_unregister: *DEBUG*: Removing bdev Nvme1n1 from list
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device bdev_Nvme1n1 (0x55cdf107de51) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device bdev_Nvme1n1 (0x55cdf107de51) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device bdev_Nvme1n1 (0x55cdf107de51) on thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device Nvme1 (0x2000f181ba00) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device Nvme1 (0x2000f181ba00) needs to unregister from thread reactor_0
+bdev.c: 967:_spdk_bdev_finish_unregister_bdevs_iter: *DEBUG*: Done unregistering bdevs
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device Nvme1 (0x2000f181ba00) on thread reactor_0
+nvme_ctrlr.c:2194:nvme_ctrlr_destruct: *DEBUG*: Prepare to destruct SSD: 0000:06:00.0
+nvme_ctrlr.c: 510:nvme_ctrlr_shutdown: *DEBUG*: RTD3E = 0 us
+nvme_ctrlr.c: 513:nvme_ctrlr_shutdown: *DEBUG*: shutdown timeout = 10000 ms
+nvme_ctrlr.c: 523:nvme_ctrlr_shutdown: *DEBUG*: shutdown complete in 1 milliseconds
+EAL: Releasing pci mapped resource for 0000:06:00.0
+EAL: Calling pci_unmap_resource for 0000:06:00.0 at 0x202001000000
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device aio_module (0x55cdef27e960) from thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device null_bdev (0x55cdef28f090) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device null_bdev (0x55cdef28f090) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device null_bdev (0x55cdef28f090) on thread reactor_0
+bdev_raid.c:1080:raid_bdev_exit: *DEBUG*: raid_bdev_exit
+bdev_raid.c: 787:raid_bdev_free: *DEBUG*: raid_bdev_free
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device bdev_mgr (0x55cdef27f2c0) from thread reactor_0
+thread.c: 416:_spdk_io_device_free: *DEBUG*: io_device bdev_mgr (0x55cdef27f2c0) needs to unregister from thread reactor_0
+thread.c: 400:_finish_unregister: *DEBUG*: Finishing unregistration of io_device bdev_mgr (0x55cdef27f2c0) on thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device copy_module (0x55cdef27f350) from thread reactor_0
+thread.c: 458:spdk_io_device_unregister: *DEBUG*: Unregistering io_device memcpy_engine (0x55cdef27f360) from thread reactor_0
+thread.c: 184:spdk_free_thread: *DEBUG*: Freeing thread reactor_0
+thread.c: 184:spdk_free_thread: *DEBUG*: Freeing thread reactor_2
+thread.c: 184:spdk_free_thread: *DEBUG*: Freeing thread reactor_6
+thread.c: 184:spdk_free_thread: *DEBUG*: Freeing thread reactor_4
+ljh@tcloud:~/projects/spdk/etc/spdk$
+

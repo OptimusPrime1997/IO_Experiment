@@ -1,0 +1,66 @@
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 0======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bc7c0 req_idx 0 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bc7c0) req_idx=0
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 0======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bc7c0 req_idx 0 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 3======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13be110 req_idx 3 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 2======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd8a0 req_idx 2 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bc7c0) req_idx=0
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13be110) req_idx=3
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 1======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd030 req_idx 1 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd8a0) req_idx=2
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd030) req_idx=1
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 1======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd030 req_idx 1 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd030) req_idx=1
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 1======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd030 req_idx 1 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 2======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd8a0 req_idx 2 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 3======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13be110 req_idx 3 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 0======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bc7c0 req_idx 0 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd8a0) req_idx=2
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13be110) req_idx=3
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd030) req_idx=1
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bc7c0) req_idx=0
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 0======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bc7c0 req_idx 0 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 1======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd030 req_idx 1 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 3======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13be110 req_idx 3 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bc7c0) req_idx=0
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 2======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13bd8a0 req_idx 2 submitted ======
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 4======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13be980 req_idx 4 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd030) req_idx=1
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13be110) req_idx=3
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13bd8a0) req_idx=2
+ status: OK
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13be980) req_idx=4
+ status: OK
+vhost_blk.c: 341:process_vq: *DEBUG*: ====== Starting processing request idx 4======
+vhost_blk.c: 368:process_vq: *DEBUG*: ====== Task 0x2000f13be980 req_idx 4 submitted ======
+vhost_blk.c: 180:blk_request_finish: *DEBUG*: Finished task (0x2000f13be980) req_idx=4
+ status: OK
+
+
