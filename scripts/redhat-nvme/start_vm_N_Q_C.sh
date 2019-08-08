@@ -1,13 +1,16 @@
 #!/bin/bash
 #start NUM VMs
 NUM=$1
-QUEUE=$2
+QUEUE=3
+if [ -n $2 ];then
+	QUEUE=$2
+fi
 CPU=3
 if [ -n $3 ];then
 	CPU=$3
 fi
-echo $CPU
-exit
+#echo $CPU
+#exit
 #remove nvme module at first
 #rmmod nvme
 #load nvme-mdev module
