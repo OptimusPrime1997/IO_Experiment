@@ -2,7 +2,12 @@
 #start NUM VMs
 NUM=$1
 QUEUE=$2
-
+CPU=3
+if [ -n $3 ];then
+	CPU=$3
+fi
+echo $CPU
+exit
 #remove nvme module at first
 #rmmod nvme
 #load nvme-mdev module
@@ -49,7 +54,7 @@ while [ $i -le $NUM ];do
 
 	/usr/local/bin/qemu-system-x86_64 \
 	    -m 4G \
-	    -smp 13 \
+	    -smp $CPU \
 	    -M pc \
 	    -name mdev-${N} \
 	    -cpu host -enable-kvm -machine kernel_irqchip=on \
