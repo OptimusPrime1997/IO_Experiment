@@ -55,11 +55,11 @@ while [ $i -le $NUM ];do
 	done
 	MAC="52:54:00:12:34:"$N
 
+	#/home/ljh/projects/qemu-4.0.0/x86_64-softmmu/qemu-system-x86_64 \
 	/usr/local/bin/qemu-system-x86_64 \
 	    -m 4G \
 	    -smp $CPU \
 	    -M pc \
-	    -name mdev-${N} \
 	    -cpu host -enable-kvm -machine kernel_irqchip=on \
 	    -hda "/home/ljh/image/"$N"ubuntu-server18.04.qcow2" \
 	    -vnc :2$N \
