@@ -1,23 +1,24 @@
 #/bin/bash
 #hexchars="0123456789ABCDEF"
 #end=$( for i in {1..6} ; do echo -n ${hexchars:$(( $RANDOM % 16 )):1} ; done | sed -e 's/\(..\)/:\1/g' )
-N=04
+N=01
 S=$(($N-1))
 MAC="52:54:00:12:34:"$N
 qemu-system-x86_64 \
   --enable-kvm \
   -cpu host \
-  -smp 1 \
-  -m 2G \
-  -object memory-backend-file,id=mem0,size=2G,mem-path=/dev/hugepages,share=on \
-  -numa node,memdev=mem0 \
+  -smp 16 \
+  -m 4G \
   -hda "/home/ljh/image/"$N"ubuntu-server18.04.qcow2" \
-  -chardev socket,id="spdk_vhost_blk"$S,path="/var/ljh/mem/vhost."$N \
-  -device vhost-user-blk-pci,chardev="spdk_vhost_blk"$S,num-queues=4 \
   -vnc :1$N \
   -net nic,model=vmxnet3,macaddr=$MAC,vectors=0 -net tap,ifname=tap$N,script=/etc/qemu-ifup-nat,downscript=/etc/qemu-ifdown-nat \
   -name "vm"$N &
 
+  #-object memory-backend-file,id=mem0,size=2G,mem-path=/dev/hugepages,share=on \
+  #-numa node,memdev=mem0 \
+
+  #-chardev socket,id="spdk_vhost_blk"$S,path="/var/ljh/mem/vhost."$N \
+  #-device vhost-user-blk-pci,chardev="spdk_vhost_blk"$S,num-queues=4 \
 
 #  taskset -c 2,3 qemu-system-x86_64 \
 # --enable-kvm \

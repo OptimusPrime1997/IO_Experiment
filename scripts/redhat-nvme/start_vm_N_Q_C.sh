@@ -1,13 +1,22 @@
 #!/bin/bash
 #start NUM VMs
 NUM=$1
-QUEUE=$2
+QUEUE=3
+if [ -n $2 ];then
+	QUEUE=$2
+fi
+CPU=3
+if [ -n $3 ];then
+	CPU=$3
+fi
+#echo $CPU
+#exit
 #remove nvme module at first
 #rmmod nvme
 #load nvme-mdev module
 modprobe nvme-mdev
 #allocate hw queue
-modprobe nvme mdev_queues=32
+modprobe nvme mdev_queues=36
 
 #to remove other devices
 for dir in $(ls /sys/bus/mdev/devices/)
@@ -32,7 +41,11 @@ while [ $i -le $NUM ];do
 	if [ $p -ge 4 ];then
 		p=$(($p+1))
 	fi
-	echo n1p${p} > ${MDEV_DEVICE_1}/namespaces/add_namespace
+	if [ $NUM -le 1 ];then
+		echo n1 > ${MDEV_DEVICE_1}/namespaces/add_namespace
+	else
+		echo n1p${p} > ${MDEV_DEVICE_1}/namespaces/add_namespace
+	fi
 #cpu number start from 0
 	echo $(($i*2-2)) > ${MDEV_DEVICE_1}/settings/iothread_cpu
 	
@@ -42,11 +55,11 @@ while [ $i -le $NUM ];do
 	done
 	MAC="52:54:00:12:34:"$N
 
+	#/home/ljh/projects/qemu-4.0.0/x86_64-softmmu/qemu-system-x86_64 \
 	/usr/local/bin/qemu-system-x86_64 \
-	    -m 2G \
-	    -smp 13 \
+	    -m 4G \
+	    -smp $CPU \
 	    -M pc \
-	    -name mdev-${N} \
 	    -cpu host -enable-kvm -machine kernel_irqchip=on \
 	    -hda "/home/ljh/image/"$N"ubuntu-server18.04.qcow2" \
 	    -vnc :2$N \

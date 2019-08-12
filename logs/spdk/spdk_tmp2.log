@@ -1,0 +1,15 @@
+Starting SPDK v18.10.2 / DPDK 18.08.0 initialization...
+[ DPDK EAL parameters: vhost --no-shconf -c 0x55 -m 4096 --base-virtaddr=0x200000000000 --file-prefix=spdk_pid43226 ]
+EAL: Probing VFIO support...
+EAL: VFIO support initialized
+EAL: PCI device 0000:06:00.0 on NUMA socket 0
+EAL:   probe driver: 8086:2700 spdk_nvme
+EAL:   using IOMMU type 1 (Type 1)
+VHOST_CONFIG: vhost-user server: socket created, fd: 27
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.01
+VHOST_CONFIG: vhost-user server: socket created, fd: 28
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.02
+VHOST_CONFIG: vhost-user server: socket created, fd: 29
+VHOST_CONFIG: bind to /var/ljh/mem/vhost.03
+EAL: Releasing pci mapped resource for 0000:06:00.0
+EAL: Calling pci_unmap_resource for 0000:06:00.0 at 0x202001000000
