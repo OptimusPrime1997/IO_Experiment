@@ -1,0 +1,390 @@
+Initializing 100 connections...
+Initializing 100 workers and preparing statements...
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+      1s        0            2.7            5.0     79.7    192.9    192.9    192.9 delivery
+      1s        0           28.0           51.0     54.5    100.7    121.6    151.0 newOrder
+      1s        0            2.7            5.0      9.4     19.9     19.9     19.9 orderStatus
+      1s        0           29.1           53.0     22.0     46.1     62.9     65.0 payment
+      1s        0            3.3            6.0     32.5     60.8     60.8     60.8 stockLevel
+      2s        0            7.0            6.0    117.4    268.4    268.4    268.4 delivery
+      2s        0           65.0           58.0     75.5    176.2    218.1    369.1 newOrder
+      2s        0            8.0            6.5      6.8     14.2     14.2     14.2 orderStatus
+      2s        0           71.0           62.0     50.3    226.5    503.3    671.1 payment
+      2s        0           10.0            8.0     39.8    167.8    167.8    167.8 stockLevel
+      3s        0            7.0            6.3    142.6    453.0    453.0    453.0 delivery
+      3s        0           67.0           61.0     83.9    419.4    604.0    738.2 newOrder
+      3s        0            9.0            7.3      8.9     27.3     27.3     27.3 orderStatus
+      3s        0           62.0           62.0     60.8    536.9    704.6    838.9 payment
+      3s        0            8.0            8.0     56.6    142.6    142.6    142.6 stockLevel
+      4s        0            8.0            6.7    176.2    738.2    738.2    738.2 delivery
+      4s        0           67.0           62.5    109.1    402.7    503.3    671.1 newOrder
+      4s        0            6.0            7.0     10.5     16.3     16.3     16.3 orderStatus
+      4s        0           69.0           63.7    142.6    906.0   1006.6   1610.6 payment
+      4s        0            2.0            6.5     62.9    469.8    469.8    469.8 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+      5s        0            7.0            6.8    125.8    536.9    536.9    536.9 delivery
+      5s        0           73.0           64.6    226.5    671.1    939.5   1073.7 newOrder
+      5s        0            5.0            6.6     11.0     17.8     17.8     17.8 orderStatus
+      5s        0           67.0           64.4     83.9    973.1   1543.5   1744.8 payment
+      5s        0            8.0            6.8     39.8    142.6    142.6    142.6 stockLevel
+      6s        0            3.0            6.2    134.2    142.6    142.6    142.6 delivery
+      6s        0           63.0           64.3    151.0    805.3    838.9    872.4 newOrder
+      6s        0           10.0            7.2     13.1     56.6     56.6     56.6 orderStatus
+      6s        0           79.0           66.8    104.9   1208.0   1543.5   1677.7 payment
+      6s        0            5.0            6.5     44.0     92.3     92.3     92.3 stockLevel
+      7s        0            7.0            6.3    109.1    159.4    159.4    159.4 delivery
+      7s        0           76.0           66.0    117.4    738.2    872.4    906.0 newOrder
+      7s        0            6.0            7.0      7.6     10.5     10.5     10.5 orderStatus
+      7s        0           66.0           66.7     62.9   1275.1   1610.6   2281.7 payment
+      7s        0            5.0            6.3     31.5     92.3     92.3     92.3 stockLevel
+      8s        0            7.0            6.4    121.6    184.5    184.5    184.5 delivery
+      8s        0           66.0           66.0    104.9   1409.3   1409.3   1543.5 newOrder
+      8s        0            5.0            6.7      8.1     10.5     10.5     10.5 orderStatus
+      8s        0           68.0           66.9     48.2   1476.4   2684.4   3892.3 payment
+      8s        0            6.0            6.2     28.3    218.1    218.1    218.1 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+      9s        0            7.0            6.4    100.7    260.0    260.0    260.0 delivery
+      9s        0           81.0           67.7     96.5   1409.3   2415.9   2415.9 newOrder
+      9s        0            7.0            6.8      7.9     10.5     10.5     10.5 orderStatus
+      9s        0           61.0           66.2     46.1   2550.1   3355.4   4160.7 payment
+      9s        0            8.0            6.4     31.5    243.3    243.3    243.3 stockLevel
+     10s        0            6.0            6.4    113.2    201.3    201.3    201.3 delivery
+     10s        0           73.0           68.2    121.6   1677.7   3087.0   3355.4 newOrder
+     10s        0            3.0            6.4      6.8      8.9      8.9      8.9 orderStatus
+     10s        0           52.0           64.8     79.7   2684.4   3221.2   3758.1 payment
+     10s        0            7.0            6.5     33.6    302.0    302.0    302.0 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+      1s        0            8.0            8.0    104.9    268.4    268.4    268.4 delivery
+      1s        0           44.0           44.1     75.5    503.3    637.5    637.5 newOrder
+      1s        0           11.0           11.0      8.9     44.0     96.5     96.5 orderStatus
+      1s        0           34.0           34.0     37.7    218.1    872.4    872.4 payment
+      1s        0            5.0            5.0     58.7    121.6    121.6    121.6 stockLevel
+      2s        0            6.0            7.0    109.1    369.1    369.1    369.1 delivery
+      2s        0           62.0           53.0    100.7    906.0    939.5   1040.2 newOrder
+      2s        0           10.0           10.5     13.1    209.7    209.7    209.7 orderStatus
+      2s        0           65.0           49.5     62.9   1006.6   1543.5   1610.6 payment
+      2s        0            9.0            7.0     35.7    838.9    838.9    838.9 stockLevel
+      3s        0            9.0            7.7    121.6    318.8    318.8    318.8 delivery
+      3s        0           81.0           62.4    142.6   1744.8   1946.2   2147.5 newOrder
+      3s        0            5.0            8.7      8.9     11.0     11.0     11.0 orderStatus
+      3s        0           70.0           56.4     88.1    939.5   1811.9   1946.2 payment
+      3s        0            7.0            7.0    134.2    453.0    453.0    453.0 stockLevel
+      4s        0            2.0            6.3     88.1    453.0    453.0    453.0 delivery
+      4s        0           80.0           66.8    125.8   1543.5   2013.3   3087.0 newOrder
+      4s        0            5.0            7.8     11.5    268.4    268.4    268.4 orderStatus
+      4s        0           57.0           56.5    151.0   1946.2   2415.9   2952.8 payment
+      4s        0            6.0            6.8     33.6    167.8    167.8    167.8 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+      5s        0            9.0            6.8    125.8    520.1    520.1    520.1 delivery
+      5s        0           59.0           65.2     60.8   1677.7   1879.0   2080.4 newOrder
+      5s        0           10.0            8.2      7.3    385.9    385.9    385.9 orderStatus
+      5s        0           61.0           57.4     52.4   3221.2   4160.7   4563.4 payment
+      5s        0            5.0            6.4    176.2    335.5    335.5    335.5 stockLevel
+      6s        0            6.0            6.7    109.1    268.4    268.4    268.4 delivery
+      6s        0           63.0           64.8    159.4   1342.2   1543.5   1610.6 newOrder
+      6s        0            9.0            8.3     11.5    130.0    130.0    130.0 orderStatus
+      6s        0           75.0           60.3     62.9   2281.7   2952.8   3355.4 payment
+      6s        0           12.0            7.3     44.0    805.3   1342.2   1342.2 stockLevel
+      7s        0            5.0            6.4     67.1    302.0    302.0    302.0 delivery
+      7s        0           60.0           64.2    100.7    486.5    939.5   1543.5 newOrder
+      7s        0            9.0            8.4      7.3     92.3     92.3     92.3 orderStatus
+      7s        0           81.0           63.3     88.1   2281.7   5368.7   6174.0 payment
+      7s        0            6.0            7.1     33.6    260.0    260.0    260.0 stockLevel
+      8s        0            7.0            6.5    104.9    142.6    142.6    142.6 delivery
+      8s        0           71.0           65.0    104.9   1744.8   2415.9   4295.0 newOrder
+      8s        0            6.0            8.1      8.4     23.1     23.1     23.1 orderStatus
+      8s        0           83.9           65.9     56.6   3221.2   6442.5   7516.2 payment
+      8s        0            8.0            7.3     44.0    369.1    369.1    369.1 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+      9s        0            7.0            6.6    184.5    469.8    469.8    469.8 delivery
+      9s        0           73.0           65.9    130.0   1543.5   1811.9   2281.7 newOrder
+      9s        0           13.0            8.7      9.4     19.9    125.8    125.8 orderStatus
+      9s        0           68.0           66.1     75.5   2818.6   4831.8   4831.8 payment
+      9s        0            4.0            6.9     30.4    520.1    520.1    520.1 stockLevel
+     10s        0            8.0            6.7     79.7    771.8    771.8    771.8 delivery
+     10s        0           69.0           66.2    104.9   1879.0   2415.9   3489.7 newOrder
+     10s        0           10.0            8.8      8.1    151.0    151.0    151.0 orderStatus
+     10s        0           64.0           65.9     52.4   5100.3   9663.7   9663.7 payment
+     10s        0            4.0            6.6     35.7   1140.9   1140.9   1140.9 stockLevel
+     11s        0            7.0            6.7    113.2    209.7    209.7    209.7 delivery
+     11s        0           72.0           66.7     92.3   1275.1   2415.9   3623.9 newOrder
+     11s        0            3.0            8.3     29.4     39.8     39.8     39.8 orderStatus
+     11s        0           93.0           68.4     44.0   4295.0   7516.2   9663.7 payment
+     11s        0            7.0            6.6     18.9    486.5    486.5    486.5 stockLevel
+     12s        0            8.0            6.8     71.3    419.4    419.4    419.4 delivery
+     12s        0           76.0           67.5     60.8    570.4   1744.8   2415.9 newOrder
+     12s        0            3.0            7.8      6.6     11.0     11.0     11.0 orderStatus
+     12s        0           82.0           69.5     60.8   5905.6   9663.7  10737.4 payment
+     12s        0            7.0            6.7     23.1    419.4    419.4    419.4 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     13s        0            8.0            6.9     79.7    209.7    209.7    209.7 delivery
+     13s        0           63.0           67.2     83.9    436.2    704.6   1811.9 newOrder
+     13s        0            5.0            7.6      8.9    369.1    369.1    369.1 orderStatus
+     13s        0           60.0           68.8     44.0   7784.6  10737.4  10737.4 payment
+     13s        0           10.0            6.9     56.6    637.5    637.5    637.5 stockLevel
+     14s        0            3.0            6.6    604.0    838.9    838.9    838.9 delivery
+     14s        0           46.0           65.6    268.4   3087.0   4831.8   4831.8 newOrder
+     14s        0            4.0            7.4     13.1    453.0    453.0    453.0 orderStatus
+     14s        0           41.0           66.8     33.6    805.3   1040.2   1040.2 payment
+     14s        0            2.0            6.6     17.8     29.4     29.4     29.4 stockLevel
+     15s        0            7.0            6.7    121.6    318.8    318.8    318.8 delivery
+     15s        0           71.0           66.0    218.1   5368.7   5905.6   6174.0 newOrder
+     15s        0            3.0            7.1     10.5     18.9     18.9     18.9 orderStatus
+     15s        0           57.0           66.1     88.1   5100.3   8053.1   9663.7 payment
+     15s        0           10.0            6.8     33.6   2013.3   2013.3   2013.3 stockLevel
+     16s        0           11.0            6.9    243.3    453.0    469.8    469.8 delivery
+     16s        0           79.0           66.8    167.8   1040.2   2550.1   5100.3 newOrder
+     16s        0            7.0            7.1     12.6    453.0    453.0    453.0 orderStatus
+     16s        0           70.0           66.4     83.9    637.5   1208.0   1275.1 payment
+     16s        0            9.0            6.9     54.5    486.5    486.5    486.5 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     17s        0           11.0            7.2    130.0    385.9    419.4    419.4 delivery
+     17s        0           96.0           68.5     83.9    318.8    604.0   2550.1 newOrder
+     17s        0            7.0            7.1      7.9     71.3     71.3     71.3 orderStatus
+     17s        0           87.0           67.6     54.5    520.1    838.9   5100.3 payment
+     17s        0           10.0            7.1     29.4    167.8    167.8    167.8 stockLevel
+     18s        0            4.0            7.0     96.5    201.3    201.3    201.3 delivery
+     18s        0           80.0           69.2     58.7   3221.2   3892.3   5637.1 newOrder
+     18s        0            8.0            7.1      6.8    176.2    176.2    176.2 orderStatus
+     18s        0           66.0           67.5     35.7    906.0   7247.8   8321.5 payment
+     18s        0           11.0            7.3     60.8    453.0    503.3    503.3 stockLevel
+     19s        0            3.0            6.8     54.5    100.7    100.7    100.7 delivery
+     19s        0           48.0           68.1     52.4   1342.2   1543.5   1543.5 newOrder
+     19s        0            4.0            6.9      4.7    117.4    117.4    117.4 orderStatus
+     19s        0           46.0           66.4     17.8   6710.9  10737.4  10737.4 payment
+     19s        0            5.0            7.2     17.8     24.1     24.1     24.1 stockLevel
+     20s        0            0.0            6.5      0.0      0.0      0.0      0.0 delivery
+     20s        0            0.0           64.7      0.0      0.0      0.0      0.0 newOrder
+     20s        0            0.0            6.6      0.0      0.0      0.0      0.0 orderStatus
+     20s        0            0.0           63.1      0.0      0.0      0.0      0.0 payment
+     20s        0            0.0            6.9      0.0      0.0      0.0      0.0 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     21s        0            4.0            6.3     62.9     96.5     96.5     96.5 delivery
+     21s        0           24.0           62.7    159.4   6710.9   7247.8   7247.8 newOrder
+     21s        0            2.0            6.4      4.7      5.5      5.5      5.5 orderStatus
+     21s        0           25.0           61.2     37.7   2684.4  11811.2  11811.2 payment
+     21s        0            1.0            6.6     29.4     29.4     29.4     29.4 stockLevel
+     22s        0           10.0            6.5     83.9    469.8    469.8    469.8 delivery
+     22s        0           73.0           63.2     96.5    704.6   3087.0   3221.2 newOrder
+     22s        0            4.0            6.3      5.0    469.8    469.8    469.8 orderStatus
+     22s        0           77.0           62.0     35.7   5368.7  13421.8  15569.3 payment
+     22s        0            6.0            6.5     24.1     30.4     30.4     30.4 stockLevel
+     23s        0            5.0            6.4     83.9    226.5    226.5    226.5 delivery
+     23s        0           77.0           63.8     67.1   1342.2   6710.9   7247.8 newOrder
+     23s        0            8.0            6.3      8.4    109.1    109.1    109.1 orderStatus
+     23s        0           67.0           62.2     41.9   7784.6  12884.9  13421.8 payment
+     23s        0            8.0            6.6     41.9    302.0    302.0    302.0 stockLevel
+     24s        0            9.0            6.5    113.2    285.2    285.2    285.2 delivery
+     24s        0           78.0           64.4     62.9    302.0   5368.7   5637.1 newOrder
+     24s        0            6.0            6.3      7.3     11.0     11.0     11.0 orderStatus
+     24s        0           76.0           62.8     39.8   2550.1  10200.5  11274.3 payment
+     24s        0            9.0            6.7     23.1    805.3    805.3    805.3 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     25s        0            7.0            6.6    100.7    805.3    805.3    805.3 delivery
+     25s        0           77.0           64.9     75.5    260.0    671.1   8589.9 newOrder
+     25s        0            6.0            6.3      8.9     83.9     83.9     83.9 orderStatus
+     25s        0           71.0           63.1     48.2    335.5  13421.8  19327.4 payment
+     25s        0            7.0            6.7     75.5    570.4    570.4    570.4 stockLevel
+     26s        0            5.0            6.5     65.0    176.2    176.2    176.2 delivery
+     26s        0           44.9           64.1     46.1    453.0   3892.3   3892.3 newOrder
+     26s        0            3.0            6.2      6.6      9.4      9.4      9.4 orderStatus
+     26s        0           52.9           62.7     22.0    192.9    436.2  15569.3 payment
+     26s        0            6.0            6.7     23.1     58.7     58.7     58.7 stockLevel
+     27s        0            5.0            6.4     88.1    226.5    226.5    226.5 delivery
+     27s        0           42.1           63.3     50.3   1409.3   3623.9   3623.9 newOrder
+     27s        0            5.0            6.1      7.3     15.7     15.7     15.7 orderStatus
+     27s        0           28.1           61.4     19.9    192.9    218.1    218.1 payment
+     27s        0            4.0            6.6     31.5   2684.4   2684.4   2684.4 stockLevel
+     28s        0            4.0            6.4     67.1    209.7    209.7    209.7 delivery
+     28s        0           32.0           62.2    104.9   5368.7   6174.0   6174.0 newOrder
+     28s        0            5.0            6.1     15.2   1006.6   1006.6   1006.6 orderStatus
+     28s        0           32.0           60.4     39.8  11811.2  16643.0  16643.0 payment
+     28s        0            3.0            6.5     96.5    872.4    872.4    872.4 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     29s        0            2.0            6.2     50.3     52.4     52.4     52.4 delivery
+     29s        0           70.0           62.5     46.1    402.7   2147.5   2818.6 newOrder
+     29s        0            5.0            6.1      7.9     16.3     16.3     16.3 orderStatus
+     29s        0           70.0           60.7     46.1  14495.5  20401.1  22548.6 payment
+     29s        0            9.0            6.6     50.3    201.3    201.3    201.3 stockLevel
+     30s        0            3.0            6.1     79.7    100.7    100.7    100.7 delivery
+     30s        0            6.0           60.6     44.0     96.5     96.5     96.5 newOrder
+     30s        0            1.0            5.9     65.0     65.0     65.0     65.0 orderStatus
+     30s        0           11.0           59.0     17.8   6174.0   8589.9   8589.9 payment
+     30s        0            1.0            6.4     58.7     58.7     58.7     58.7 stockLevel
+     31s        0            2.0            6.0     79.7    104.9    104.9    104.9 delivery
+     31s        0           28.0           59.5     58.7   5100.3   5905.6   5905.6 newOrder
+     31s        0            3.0            5.8      7.9      8.4      8.4      8.4 orderStatus
+     31s        0           35.0           58.3     50.3  13958.6  21474.8  21474.8 payment
+     31s        0            3.0            6.3     25.2    104.9    104.9    104.9 stockLevel
+     32s        0           10.0            6.1    113.2    771.8    771.8    771.8 delivery
+     32s        0           76.0           60.0     92.3    419.4   2147.5   3087.0 newOrder
+     32s        0           18.0            6.2      7.1    167.8    352.3    352.3 orderStatus
+     32s        0           85.0           59.1     65.0   9663.7  20401.1  28991.0 payment
+     32s        0            7.0            6.3     25.2    151.0    151.0    151.0 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     33s        0            7.0            6.1     83.9    469.8    469.8    469.8 delivery
+     33s        0          101.0           61.3     65.0    260.0    318.8    335.5 newOrder
+     33s        0           10.0            6.3      7.9     96.5     96.5     96.5 orderStatus
+     33s        0           80.0           59.7     52.4   4295.0   9663.7  21474.8 payment
+     33s        0            9.0            6.4     32.5    134.2    134.2    134.2 stockLevel
+     34s        0            9.0            6.2     88.1    243.3    243.3    243.3 delivery
+     34s        0           73.0           61.6     48.2    251.7    285.2    335.5 newOrder
+     34s        0            5.0            6.3      7.6      8.9      8.9      8.9 orderStatus
+     34s        0           78.0           60.3     35.7    335.5    939.5   1208.0 payment
+     34s        0           11.0            6.5     29.4     58.7     96.5     96.5 stockLevel
+     35s        0            0.0            6.0      0.0      0.0      0.0      0.0 delivery
+     35s        0            0.0           59.9      0.0      0.0      0.0      0.0 newOrder
+     35s        0            0.0            6.1      0.0      0.0      0.0      0.0 orderStatus
+     35s        0            0.0           58.5      0.0      0.0      0.0      0.0 payment
+     35s        0            0.0            6.3      0.0      0.0      0.0      0.0 stockLevel
+     36s        0            0.0            5.9      0.0      0.0      0.0      0.0 delivery
+     36s        0            0.0           58.2      0.0      0.0      0.0      0.0 newOrder
+     36s        0            0.0            5.9      0.0      0.0      0.0      0.0 orderStatus
+     36s        0            0.0           56.9      0.0      0.0      0.0      0.0 payment
+     36s        0            0.0            6.1      0.0      0.0      0.0      0.0 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     37s        0            4.0            5.8     56.6    159.4    159.4    159.4 delivery
+     37s        0           39.0           57.7     44.0   3489.7   4160.7   4160.7 newOrder
+     37s        0            5.0            5.9      6.8     46.1     46.1     46.1 orderStatus
+     37s        0           44.0           56.6     27.3   3489.7  24696.1  24696.1 payment
+     37s        0            4.0            6.1     17.8   3221.2   3221.2   3221.2 stockLevel
+     38s        0            0.0            5.7      0.0      0.0      0.0      0.0 delivery
+     38s        0            0.0           56.2      0.0      0.0      0.0      0.0 newOrder
+     38s        0            0.0            5.7      0.0      0.0      0.0      0.0 orderStatus
+     38s        0            0.0           55.1      0.0      0.0      0.0      0.0 payment
+     38s        0            0.0            5.9      0.0      0.0      0.0      0.0 stockLevel
+     39s        0            0.0            5.5      0.0      0.0      0.0      0.0 delivery
+     39s        0            0.0           54.7      0.0      0.0      0.0      0.0 newOrder
+     39s        0            0.0            5.6      0.0      0.0      0.0      0.0 orderStatus
+     39s        0            0.0           53.7      0.0      0.0      0.0      0.0 payment
+     39s        0            0.0            5.8      0.0      0.0      0.0      0.0 stockLevel
+     40s        0            2.0            5.4     58.7     75.5     75.5     75.5 delivery
+     40s        0            7.0           53.5     39.8     56.6     56.6     56.6 newOrder
+     40s        0            2.0            5.5      4.7      5.0      5.0      5.0 orderStatus
+     40s        0           14.0           52.7     21.0  11811.2  11811.2  11811.2 payment
+     40s        0            2.0            5.7     15.7   2952.8   2952.8   2952.8 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     41s        0            6.0            5.4    113.2    268.4    268.4    268.4 delivery
+     41s        0           73.0           54.0     75.5   3758.1   6442.5   6979.3 newOrder
+     41s        0            4.0            5.5      8.1    159.4    159.4    159.4 orderStatus
+     41s        0           60.0           52.9     44.0  19327.4  32212.3  33286.0 payment
+     41s        0            3.0            5.6     28.3    184.5    184.5    184.5 stockLevel
+     42s        0            3.0            5.4    121.6    121.6    121.6    121.6 delivery
+     42s        0           35.0           53.5     54.5    151.0    184.5    184.5 newOrder
+     42s        0            3.0            5.4      9.4     24.1     24.1     24.1 orderStatus
+     42s        0           32.0           52.4     29.4     96.5  34359.7  34359.7 payment
+     42s        0            6.0            5.6     32.5    104.9    104.9    104.9 stockLevel
+     43s        0            0.0            5.3      0.0      0.0      0.0      0.0 delivery
+     43s        0            0.0           52.3      0.0      0.0      0.0      0.0 newOrder
+     43s        0            0.0            5.3      0.0      0.0      0.0      0.0 orderStatus
+     43s        0            0.0           51.1      0.0      0.0      0.0      0.0 payment
+     43s        0            0.0            5.5      0.0      0.0      0.0      0.0 stockLevel
+     44s        0            0.0            5.1      0.0      0.0      0.0      0.0 delivery
+     44s        0            0.0           51.1      0.0      0.0      0.0      0.0 newOrder
+     44s        0            0.0            5.2      0.0      0.0      0.0      0.0 orderStatus
+     44s        0            0.0           50.0      0.0      0.0      0.0      0.0 payment
+     44s        0            0.0            5.4      0.0      0.0      0.0      0.0 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     45s        0            0.0            5.0      0.0      0.0      0.0      0.0 delivery
+     45s        0            0.0           50.0      0.0      0.0      0.0      0.0 newOrder
+     45s        0            0.0            5.0      0.0      0.0      0.0      0.0 orderStatus
+     45s        0            0.0           48.9      0.0      0.0      0.0      0.0 payment
+     45s        0            0.0            5.2      0.0      0.0      0.0      0.0 stockLevel
+     46s        0            2.0            5.0     60.8   4026.5   4026.5   4026.5 delivery
+     46s        0           33.0           49.6     65.0   5100.3   9126.8   9126.8 newOrder
+     46s        0            6.0            5.1      8.9    113.2    113.2    113.2 orderStatus
+     46s        0           29.0           48.4     28.3  28991.0  34359.7  34359.7 payment
+     46s        0            4.0            5.2     23.1   4563.4   4563.4   4563.4 stockLevel
+     47s        0            6.0            5.0    104.9    402.7    402.7    402.7 delivery
+     47s        0           76.0           50.2     79.7    218.1    251.7    973.1 newOrder
+     47s        0            4.0            5.0      7.1     16.8     16.8     16.8 orderStatus
+     47s        0           62.0           48.7     52.4  28991.0  42949.7  47244.6 payment
+     47s        0            3.0            5.2     96.5    121.6    121.6    121.6 stockLevel
+     48s        0            9.0            5.1     92.3    130.0    130.0    130.0 delivery
+     48s        0           81.0           50.8     71.3    335.5   1543.5   1744.8 newOrder
+     48s        0            6.0            5.1      7.3     14.7     14.7     14.7 orderStatus
+     48s        0           91.0           49.6     46.1    352.3  15569.3  24696.1 payment
+     48s        0           11.0            5.3     46.1    104.9    113.2    113.2 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     49s        0            7.0            5.1     88.1    134.2    134.2    134.2 delivery
+     49s        0           66.0           51.1     79.7    167.8    520.1    570.4 newOrder
+     49s        0           10.0            5.2      8.9     65.0     65.0     65.0 orderStatus
+     49s        0           65.0           49.9     48.2  20401.1  27917.3  36507.2 payment
+     49s        0            9.0            5.4     31.5     92.3     92.3     92.3 stockLevel
+     50s        0            4.0            5.1     58.7    113.2    113.2    113.2 delivery
+     50s        0           33.0           50.8     48.2    167.8    192.9    192.9 newOrder
+     50s        0            3.0            5.1      5.8      6.8      6.8      6.8 orderStatus
+     50s        0           39.0           49.7     23.1    226.5  40802.2  40802.2 payment
+     50s        0            5.0            5.4     26.2    117.4    117.4    117.4 stockLevel
+     51s        0            2.0            5.0    130.0    130.0    130.0    130.0 delivery
+     51s        0           25.0           50.3     46.1   2952.8   3087.0   3087.0 newOrder
+     51s        0            0.0            5.0      0.0      0.0      0.0      0.0 orderStatus
+     51s        0           16.0           49.0     21.0   1040.2   1073.7   1073.7 payment
+     51s        0            2.0            5.3     25.2     50.3     50.3     50.3 stockLevel
+     52s        0            3.0            5.0     75.5     79.7     79.7     79.7 delivery
+     52s        0           50.0           50.3     54.5   4160.7   5637.1   5637.1 newOrder
+     52s        0            6.0            5.0      5.0     17.8     17.8     17.8 orderStatus
+     52s        0           64.0           49.3     27.3  10200.5  23622.3  34359.7 payment
+     52s        0            3.0            5.3     83.9     96.5     96.5     96.5 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     53s        0            5.0            5.0     60.8    121.6    121.6    121.6 delivery
+     53s        0           26.0           49.8     35.7    318.8    335.5    335.5 newOrder
+     53s        0            2.0            5.0    125.8    130.0    130.0    130.0 orderStatus
+     53s        0           27.0           48.9     18.9  30064.8  36507.2  36507.2 payment
+     53s        0            2.0            5.2     16.3     17.8     17.8     17.8 stockLevel
+     54s        0            0.0            4.9      0.0      0.0      0.0      0.0 delivery
+     54s        0            0.0           48.9      0.0      0.0      0.0      0.0 newOrder
+     54s        0            0.0            4.9      0.0      0.0      0.0      0.0 orderStatus
+     54s        0            0.0           48.0      0.0      0.0      0.0      0.0 payment
+     54s        0            0.0            5.1      0.0      0.0      0.0      0.0 stockLevel
+     55s        0            0.0            4.8      0.0      0.0      0.0      0.0 delivery
+     55s        0            0.0           48.0      0.0      0.0      0.0      0.0 newOrder
+     55s        0            0.0            4.8      0.0      0.0      0.0      0.0 orderStatus
+     55s        0            0.0           47.1      0.0      0.0      0.0      0.0 payment
+     55s        0            0.0            5.0      0.0      0.0      0.0      0.0 stockLevel
+     56s        0            2.0            4.7     71.3     92.3     92.3     92.3 delivery
+     56s        0           18.9           47.5    192.9   5368.7   6442.5   6442.5 newOrder
+     56s        0            2.0            4.7      9.4     10.5     10.5     10.5 orderStatus
+     56s        0           23.9           46.7     29.4  36507.2  47244.6  47244.6 payment
+     56s        0            2.0            4.9     11.5     26.2     26.2     26.2 stockLevel
+_elapsed___errors__ops/sec(inst)___ops/sec(cum)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)
+     57s        0            5.0            4.8    184.5    251.7    251.7    251.7 delivery
+     57s        0           63.2           47.7     96.5    637.5   1409.3   3758.1 newOrder
+     57s        0            8.0            4.8      9.4    520.1    520.1    520.1 orderStatus
+     57s        0           57.2           46.9     60.8  16643.0  22548.6  22548.6 payment
+     57s        0            8.0            5.0     46.1    113.2    113.2    113.2 stockLevel
+     58s        0            5.0            4.8    117.4    285.2    285.2    285.2 delivery
+     58s        0           57.0           47.9     71.3    302.0   1342.2   5905.6 newOrder
+     58s        0           11.0            4.9     12.1     18.9     22.0     22.0 orderStatus
+     58s        0           78.0           47.4     33.6   6442.5  28991.0  36507.2 payment
+     58s        0            6.0            5.0     33.6    402.7    402.7    402.7 stockLevel
+     59s        0            3.0            4.7    104.9    218.1    218.1    218.1 delivery
+     59s        0           28.0           47.6     39.8   1342.2   6174.0   6174.0 newOrder
+     59s        0            0.0            4.8      0.0      0.0      0.0      0.0 orderStatus
+     59s        0           19.0           47.0     15.2     92.3    109.1    109.1 payment
+     59s        0            1.0            4.9     15.2     15.2     15.2     15.2 stockLevel
+    1m0s        0            0.0            4.7      0.0      0.0      0.0      0.0 delivery
+    1m0s        0            0.0           46.8      0.0      0.0      0.0      0.0 newOrder
+    1m0s        0            0.0            4.8      0.0      0.0      0.0      0.0 orderStatus
+    1m0s        0            0.0           46.2      0.0      0.0      0.0      0.0 payment
+    1m0s        0            0.0            4.9      0.0      0.0      0.0      0.0 stockLevel
+
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__total
+   60.0s        0            279            4.7    158.1    104.9    419.4    771.8   4026.5  delivery
+   60.0s        0           2806           46.8    349.6     79.7   1879.0   5368.7   9126.8  newOrder
+   60.0s        0            285            4.8     39.2      8.4    176.2    453.0   1006.6  orderStatus
+   60.0s        0           2770           46.2   1015.6     46.1   5637.1  23622.3  47244.6  payment
+   60.0s        0            292            4.9    152.4     35.7    520.1   2684.4   4563.4  stockLevel
+
+_elapsed___errors_____ops(total)___ops/sec(cum)__avg(ms)__p50(ms)__p95(ms)__p99(ms)_pMax(ms)__result
+   60.0s        0           6432          107.2    605.4     62.9   2684.4  12884.9  47244.6  
+Audit check 9.2.1.7: SKIP: not enough delivery transactions to be statistically significant
+Audit check 9.2.2.5.1: SKIP: not enough orders to be statistically significant
+Audit check 9.2.2.5.2: SKIP: not enough orders to be statistically significant
+Audit check 9.2.2.5.3: SKIP: not enough orders to be statistically significant
+Audit check 9.2.2.5.4: SKIP: not enough payments to be statistically significant
+Audit check 9.2.2.5.5: SKIP: not enough payments to be statistically significant
+Audit check 9.2.2.5.6: SKIP: not enough order status transactions to be statistically significant
+
+_elapsed_______tpmC____efc__avg(ms)__p50(ms)__p90(ms)__p95(ms)__p99(ms)_pMax(ms)
+   60.0s     2806.0 2182.0%    349.6     79.7    738.2   1879.0   5368.7   9126.8

@@ -23,10 +23,10 @@ else
 	str=${str}'n\n\n\n\n\n'
 	i=5
 	while [ $i -le $(($N)) ];do
-		str=${str}'n\n\n\n\n+'${SIZE}'G\n'
+		str=${str}'n\n\n+'${SIZE}'G\n'
 		i=$(($i+1))
 	done
-	str=${str}'n\n\n\n\n\n'
+	str=${str}'n\n\n\n\n'
 	str=${str}'w\n'
 fi
 

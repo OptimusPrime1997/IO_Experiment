@@ -17,14 +17,15 @@
 #                    placed in /etc/init.d.
 ### END INIT INFO
 DISK=nvme0n1
-if [ ! -n $1 ];then
+if [ ! -n "$1" ];then
 	echo "$1 is empty"
 	DISK=$1
 fi
-ps -ef |grep mysql |grep  -v grep &> /dev/null
-if [ $? -eq 0 ];then
-	echo "mysql service is running"
-else
+#ps -ef |grep mysql |grep  -v grep &> /dev/null
+res=`df -h | grep '/opt'`
+if [ ! -z "$res" ];then
+	echo $DISK" is mounted;exit"
+else 
 	df -h|grep ${DISK} &> /dev/null
 	if [ $? -ne 0 ];then
 		echo "mount ${DISK} to /opt"
@@ -35,5 +36,5 @@ else
 fi
 #echo "execute /etc/init.d/sdb-init.sh" >> /var/log/init.log
 chown mysql:mysql -R /opt/*
-service mysql start
+#service mysql start
 service sshd start
